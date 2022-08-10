@@ -5,7 +5,7 @@ import 'package:blog_tech/colors.dart';
 import 'package:blog_tech/home.dart';
 
 class SplashScreen extends StatefulWidget {
-  const SplashScreen({Key? key}) : super(key: key);
+   SplashScreen({Key? key}) : super(key: key);
 
   @override
   State<SplashScreen> createState() => _SplashScreenState();
@@ -14,9 +14,9 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
-    Future.delayed(const Duration(seconds: 4)).then((value) {
-      Navigator.of(context)
-          .push(MaterialPageRoute(builder: (context) => const HomeScreen()));
+    Future.delayed( Duration(seconds: 4)).then((value) {
+      Navigator.of(context).pushReplacement(
+          MaterialPageRoute(builder: (context) =>  HomeScreen()));
     });
 
     super.initState();

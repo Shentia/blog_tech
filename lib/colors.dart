@@ -5,11 +5,16 @@ class solidColors {
   static const Color title = Color.fromARGB(255, 40, 107, 184);
   static const Color subtitle = Color.fromARGB(255, 0, 0, 0);
   static const Color scaffold = Color.fromARGB(255, 255, 255, 255);
+  static const Color systemNavigationBarColor =
+      Color.fromARGB(255, 255, 255, 255);
   static const Color lightText = Color.fromARGB(255, 255, 255, 255);
   static const Color selectedPodcast = Color.fromARGB(255, 255, 139, 26);
   static const Color submitArticle = Color.fromARGB(255, 209, 209, 209);
   static const Color submitPodcast = Color.fromARGB(255, 246, 246, 246);
   static const Color subText = Color.fromARGB(255, 197, 197, 197);
+  static const Color statusBarColor = Color.fromARGB(255, 255, 255, 255);
+  static const Color posterTitle = Color.fromARGB(255, 255, 255, 255);
+  static const Color posterSubTitle = Color.fromARGB(200, 255, 255, 255);
 }
 
 class GradientColors {
@@ -27,6 +32,15 @@ class GradientColors {
     colors: [
       Color.fromARGB(255, 0, 0, 0),
       Color.fromARGB(255, 63, 63, 63),
+    ],
+  );
+  static const LinearGradient bannerCoverGradient = LinearGradient(
+    begin: Alignment.topCenter,
+    end: Alignment.bottomCenter,
+    colors: [
+      Color.fromARGB(0, 0, 0, 0),
+      Color.fromARGB(100, 72, 20, 88),
+      Color.fromARGB(255, 28, 20, 81),
     ],
   );
 }

@@ -1,7 +1,18 @@
+import 'package:blog_tech/colors.dart';
 import 'package:blog_tech/splash_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 void main() {
+  SystemChrome.setSystemUIOverlayStyle(
+    SystemUiOverlayStyle.light.copyWith(
+      statusBarColor: solidColors.statusBarColor,
+      statusBarIconBrightness: Brightness.dark,
+      systemNavigationBarColor: solidColors.systemNavigationBarColor,
+      systemNavigationBarIconBrightness: Brightness.dark,
+    ),
+  );
+
   runApp(const MyApp());
 }
 
@@ -17,13 +28,22 @@ class MyApp extends StatelessWidget {
           fontFamily: 'whitney',
           textTheme: const TextTheme(
             headline1: TextStyle(
-                fontFamily: 'whitney',
-                fontSize: 72.0,
-                fontWeight: FontWeight.w300),
+              fontFamily: 'whitney',
+              fontSize: 20,
+              color: solidColors.posterTitle,
+              fontWeight: FontWeight.w700,
+            ),
+            subtitle1: TextStyle(
+              fontFamily: 'whitney',
+              fontSize: 16,
+              color: solidColors.posterSubTitle,
+              fontWeight: FontWeight.w300,
+            ),
             bodyText1: TextStyle(
-                fontFamily: 'whitney',
-                fontSize: 16.0,
-                fontWeight: FontWeight.w300),
+              fontFamily: 'whitney',
+              fontSize: 16.0,
+              fontWeight: FontWeight.w300,
+            ),
             headline2: TextStyle(
                 fontFamily: 'whitney',
                 fontSize: 36.0,
@@ -39,6 +59,6 @@ class MyApp extends StatelessWidget {
           ),
         ),
         debugShowCheckedModeBanner: false,
-        home:  SplashScreen());
+        home: SplashScreen());
   }
 }
