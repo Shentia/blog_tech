@@ -51,7 +51,8 @@ class MyApp extends StatelessWidget {
             headline3: TextStyle(
                 fontFamily: 'whitney',
                 fontSize: 24.0,
-                fontWeight: FontWeight.w300),
+                fontWeight: FontWeight.w300,
+                color: solidColors.moreArticles),
             headline4: TextStyle(
                 fontFamily: 'whitney',
                 fontSize: 20.0,
