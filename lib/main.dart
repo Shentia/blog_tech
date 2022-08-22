@@ -1,5 +1,5 @@
 import 'package:blog_tech/colors.dart';
-import 'package:blog_tech/splash_screen.dart';
+import 'package:blog_tech/screen/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 

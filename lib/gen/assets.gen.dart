@@ -24,6 +24,9 @@ class $AssetsImagesGen {
   /// File path: assets/images/news.jpg
   AssetGenImage get news => const AssetGenImage('assets/images/news.jpg');
 
+  /// File path: assets/images/profile.png
+  AssetGenImage get profile => const AssetGenImage('assets/images/profile.png');
+
   /// File path: assets/images/splash.png
   AssetGenImage get splash => const AssetGenImage('assets/images/splash.png');
 
