@@ -1,5 +1,6 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
+// ignore: camel_case_types
 class solidColors {
   static const Color primaryColor = Color.fromARGB(255, 68, 4, 87);
   static const Color title = Color.fromARGB(255, 40, 107, 184);
@@ -17,6 +18,7 @@ class solidColors {
   static const Color posterTitle = Color.fromARGB(255, 255, 255, 255);
   static const Color posterSubTitle = Color.fromARGB(200, 255, 255, 255);
   static const Color moreArticles = Color.fromARGB(255, 40, 107, 184);
+  static const Color divider = Color.fromARGB(255, 112, 112, 112);
 }
 
 class GradientColors {

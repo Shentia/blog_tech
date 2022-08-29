@@ -1,5 +1,7 @@
+// ignore: file_names
 import 'package:blog_tech/colors.dart';
 import 'package:blog_tech/gen/assets.gen.dart';
+import 'package:blog_tech/my_component.dart';
 import 'package:blog_tech/strings.dart';
 import 'package:flutter/material.dart';
 
@@ -37,6 +39,63 @@ class profileScreen extends StatelessWidget {
                 style: textTheme.headline3,
               )
             ],
+          ),
+          const SizedBox(height: 60),
+          Text(
+            "Ahmadreza",
+            style: textTheme.headline4,
+          ),
+          Text(
+            "email@gmail.com",
+            style: textTheme.headline4,
+          ),
+          const SizedBox(
+            height: 40,
+          ),
+          const profileDevider(),
+          InkWell(
+            splashColor: solidColors.primaryColor,
+            onTap: (() {}),
+            child: SizedBox(
+              height: 45,
+              child: Center(
+                child: Text(
+                  Strings.myFavoriteBlog,
+                  style: textTheme.headline4,
+                ),
+              ),
+            ),
+          ),
+          const profileDevider(),
+          InkWell(
+            splashColor: solidColors.primaryColor,
+            onTap: (() {}),
+            child: SizedBox(
+              height: 45,
+              child: Center(
+                child: Text(
+                  Strings.myFavoritePodcast,
+                  style: textTheme.headline4,
+                ),
+              ),
+            ),
+          ),
+          const profileDevider(),
+          InkWell(
+            splashColor: solidColors.primaryColor,
+            onTap: (() {}),
+            child: SizedBox(
+              height: 45,
+              child: Center(
+                child: Text(
+                  Strings.signOut,
+                  style: textTheme.headline4,
+                ),
+              ),
+            ),
+          ),
+          const SizedBox(
+            height: 60,
           )
         ],
       ),

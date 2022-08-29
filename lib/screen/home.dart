@@ -4,8 +4,15 @@ import 'package:blog_tech/screen/profile-screen.dart';
 import 'package:flutter/material.dart';
 import '../colors.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   HomeScreen({Key? key}) : super(key: key);
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  var selectedPageIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -13,6 +20,11 @@ class HomeScreen extends StatelessWidget {
 
     var size = MediaQuery.of(context).size;
     double bodyMargin = size.width / 10;
+
+    List<Widget> techMainScreenPages = [
+      homeScreen(size: size, textTheme: textTheme, bodyMargin: bodyMargin),
+      profileScreen(size: size, textTheme: textTheme, bodyMargin: bodyMargin),
+    ];
 
     return SafeArea(
       child: Scaffold(
@@ -42,9 +54,10 @@ class HomeScreen extends StatelessWidget {
         ),
         body: Stack(
           children: [
-            Positioned.fill(
-              child: profileScreen(
-                  size: size, textTheme: textTheme, bodyMargin: bodyMargin),
+            Center(
+              child: Positioned.fill(
+                child: techMainScreenPages[selectedPageIndex],
+              ),
             ),
             ButtomNavigation(size: size, bodyMargin: bodyMargin),
           ],

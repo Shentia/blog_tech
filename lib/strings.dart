@@ -5,4 +5,7 @@ class Strings {
   static const String submitNews = 'Submit News';
   static const String submitPod = 'Submit Podcast';
   static const String editImageProfile = 'Edit your image profile';
+  static const String myFavoriteBlog = 'My Favorite Blog';
+  static const String myFavoritePodcast = 'My Favorite Podcast';
+  static const String signOut = 'Sign Out';
 }
