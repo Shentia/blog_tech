@@ -8,4 +8,9 @@ class Strings {
   static const String myFavoriteBlog = 'My Favorite Blog';
   static const String myFavoritePodcast = 'My Favorite Podcast';
   static const String signOut = 'Sign Out';
+  static const String welcome = """
+welcome to our blog
+for using other services you should 
+register on app
+  """;
 }

@@ -1,4 +1,5 @@
 import 'package:blog_tech/colors.dart';
+import 'package:blog_tech/screen/register-intro.dart';
 import 'package:blog_tech/screen/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -60,6 +61,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
         debugShowCheckedModeBanner: false,
-        home: SplashScreen());
+        // home: SplashScreen());
+        home: RegisterIntro());
   }
 }
