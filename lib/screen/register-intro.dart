@@ -1,16 +1,16 @@
-import 'package:blog_tech/colors.dart';
-import 'package:blog_tech/strings.dart';
+import '../strings.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../gen/assets.gen.dart';
 
 class RegisterIntro extends StatelessWidget {
+  const RegisterIntro({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     var textTheme = Theme.of(context).textTheme;
     var size = MediaQuery.of(context).size;
-
     return SafeArea(
       child: Scaffold(
           body: Center(
@@ -29,21 +29,24 @@ class RegisterIntro extends StatelessWidget {
             ),
           ),
           ElevatedButton(
-            onPressed: () {},
-            style: ButtonStyle(
-              textStyle: MaterialStateProperty.resolveWith((states) {
-                if (states.contains(MaterialState.pressed)) {
-                  return const TextStyle(fontSize: 25);
-                }
-                return const TextStyle(fontSize: 20);
-              }),
-              backgroundColor: MaterialStateProperty.resolveWith((states) {
-                if (states.contains(MaterialState.pressed)) {
-                  return solidColors.moreArticles;
-                }
-                return solidColors.primaryColor;
-              }),
-            ),
+            onPressed: () {
+              showModalBottomSheet(
+                backgroundColor: Colors.transparent,
+                context: context,
+                builder: ((context) {
+                  return Container(
+                    height: size.height / 2,
+                    decoration: const BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(30),
+                        topRight: Radius.circular(30),
+                      ),
+                    ),
+                  );
+                }),
+              );
+            },
             child: const Text("Start"),
           ),
         ],

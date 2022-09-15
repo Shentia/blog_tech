@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 // ignore: camel_case_types
-class solidColors {
+class SolidColors {
   static const Color primaryColor = Color.fromARGB(255, 68, 4, 87);
   static const Color title = Color.fromARGB(255, 40, 107, 184);
   static const Color subtitle = Color.fromARGB(255, 0, 0, 0);

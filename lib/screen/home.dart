@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import '../colors.dart';
 
 class HomeScreen extends StatefulWidget {
-  HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen({Key? key}) : super(key: key);
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -29,7 +29,7 @@ class _HomeScreenState extends State<HomeScreen> {
       child: Scaffold(
         appBar: AppBar(
           elevation: 0,
-          backgroundColor: solidColors.scaffold,
+          backgroundColor: SolidColors.scaffold,
           title: Padding(
             padding: const EdgeInsets.fromLTRB(0, 10, 0, 0),
             child: Row(
@@ -37,7 +37,7 @@ class _HomeScreenState extends State<HomeScreen> {
               children: [
                 const Icon(
                   Icons.menu,
-                  color: solidColors.scaffoldIcon,
+                  color: SolidColors.scaffoldIcon,
                 ),
                 Image(
                   image: AssetImage(Assets.images.splash.path),
@@ -45,7 +45,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 const Icon(
                   Icons.search,
-                  color: solidColors.scaffoldIcon,
+                  color: SolidColors.scaffoldIcon,
                 ),
               ],
             ),
@@ -53,27 +53,21 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         body: Stack(
           children: [
-            Center(
-              child: Positioned.fill(
-                child: IndexedStack(
-                  index: selectedPageIndex,
-                  children: [
-                    homeScreen(
-                        size: size,
-                        textTheme: textTheme,
-                        bodyMargin: bodyMargin),
-                    profileScreen(
-                        size: size,
-                        textTheme: textTheme,
-                        bodyMargin: bodyMargin),
-                  ],
-                ),
+            Positioned.fill(
+              child: IndexedStack(
+                index: selectedPageIndex,
+                children: [
+                  homeScreen(
+                      size: size, textTheme: textTheme, bodyMargin: bodyMargin),
+                  profileScreen(
+                      size: size, textTheme: textTheme, bodyMargin: bodyMargin),
+                ],
               ),
             ),
             ButtomNavigation(
               size: size,
               bodyMargin: bodyMargin,
-              ChangeMainScreen: (int value) {
+              changeMainScreen: (int value) {
                 setState(() {
                   selectedPageIndex = value;
                 });
@@ -91,12 +85,12 @@ class ButtomNavigation extends StatelessWidget {
     Key? key,
     required this.size,
     required this.bodyMargin,
-    required this.ChangeMainScreen,
+    required this.changeMainScreen,
   }) : super(key: key);
 
   final Size size;
   final double bodyMargin;
-  final Function(int) ChangeMainScreen;
+  final Function(int) changeMainScreen;
 
   @override
   Widget build(BuildContext context) {
@@ -121,7 +115,7 @@ class ButtomNavigation extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 IconButton(
-                  onPressed: (() => ChangeMainScreen(0)),
+                  onPressed: (() => changeMainScreen(0)),
                   icon: const Icon(
                     Icons.home,
                     color: Colors.white,
@@ -135,7 +129,7 @@ class ButtomNavigation extends StatelessWidget {
                   ),
                 ),
                 IconButton(
-                  onPressed: (() => ChangeMainScreen(1)),
+                  onPressed: (() => changeMainScreen(1)),
                   icon: const Icon(
                     Icons.person,
                     color: Colors.white,

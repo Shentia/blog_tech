@@ -1,9 +1,8 @@
-// ignore: file_names
-import 'package:blog_tech/colors.dart';
-import 'package:blog_tech/gen/assets.gen.dart';
-import 'package:blog_tech/my_component.dart';
-import 'package:blog_tech/strings.dart';
 import 'package:flutter/material.dart';
+import '../colors.dart';
+import '../gen/assets.gen.dart';
+import '../my_component.dart';
+import '../strings.dart';
 
 // ignore: camel_case_types
 class profileScreen extends StatelessWidget {
@@ -22,82 +21,85 @@ class profileScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       physics: const BouncingScrollPhysics(),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Image(
-            image: AssetImage(Assets.images.profile.path),
-          ),
-          const SizedBox(height: 12),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              const Icon(Icons.note_add, color: solidColors.moreArticles),
-              const SizedBox(width: 8),
-              Text(
-                Strings.editImageProfile,
-                style: textTheme.headline3,
-              )
-            ],
-          ),
-          const SizedBox(height: 60),
-          Text(
-            "Ahmadreza",
-            style: textTheme.headline4,
-          ),
-          Text(
-            "email@gmail.com",
-            style: textTheme.headline4,
-          ),
-          const SizedBox(
-            height: 40,
-          ),
-          const profileDevider(),
-          InkWell(
-            splashColor: solidColors.primaryColor,
-            onTap: (() {}),
-            child: SizedBox(
-              height: 45,
-              child: Center(
-                child: Text(
-                  Strings.myFavoriteBlog,
-                  style: textTheme.headline4,
+      child: Padding(
+        padding: const EdgeInsets.only(top: 24.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image(
+              image: AssetImage(Assets.images.profile.path),
+            ),
+            const SizedBox(height: 12),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Icon(Icons.note_add, color: SolidColors.moreArticles),
+                const SizedBox(width: 8),
+                Text(
+                  Strings.editImageProfile,
+                  style: textTheme.headline3,
+                )
+              ],
+            ),
+            const SizedBox(height: 60),
+            Text(
+              "Ahmadreza",
+              style: textTheme.headline4,
+            ),
+            Text(
+              "email@gmail.com",
+              style: textTheme.headline4,
+            ),
+            const SizedBox(
+              height: 40,
+            ),
+            const profileDevider(),
+            InkWell(
+              splashColor: SolidColors.primaryColor,
+              onTap: (() {}),
+              child: SizedBox(
+                height: 45,
+                child: Center(
+                  child: Text(
+                    Strings.myFavoriteBlog,
+                    style: textTheme.headline4,
+                  ),
                 ),
               ),
             ),
-          ),
-          const profileDevider(),
-          InkWell(
-            splashColor: solidColors.primaryColor,
-            onTap: (() {}),
-            child: SizedBox(
-              height: 45,
-              child: Center(
-                child: Text(
-                  Strings.myFavoritePodcast,
-                  style: textTheme.headline4,
+            const profileDevider(),
+            InkWell(
+              splashColor: SolidColors.primaryColor,
+              onTap: (() {}),
+              child: SizedBox(
+                height: 45,
+                child: Center(
+                  child: Text(
+                    Strings.myFavoritePodcast,
+                    style: textTheme.headline4,
+                  ),
                 ),
               ),
             ),
-          ),
-          const profileDevider(),
-          InkWell(
-            splashColor: solidColors.primaryColor,
-            onTap: (() {}),
-            child: SizedBox(
-              height: 45,
-              child: Center(
-                child: Text(
-                  Strings.signOut,
-                  style: textTheme.headline4,
+            const profileDevider(),
+            InkWell(
+              splashColor: SolidColors.primaryColor,
+              onTap: (() {}),
+              child: SizedBox(
+                height: 45,
+                child: Center(
+                  child: Text(
+                    Strings.signOut,
+                    style: textTheme.headline4,
+                  ),
                 ),
               ),
             ),
-          ),
-          const SizedBox(
-            height: 60,
-          )
-        ],
+            const SizedBox(
+              height: 60,
+            )
+          ],
+        ),
       ),
     );
   }

@@ -1,7 +1,8 @@
-import 'package:blog_tech/colors.dart';
-import 'package:blog_tech/models/fake_data.dart';
-import 'package:blog_tech/strings.dart';
 import 'package:flutter/material.dart';
+import '../strings.dart';
+
+import '../colors.dart';
+import '../models/fake_data.dart';
 
 // ignore: camel_case_types
 class homeScreen extends StatelessWidget {
@@ -121,7 +122,7 @@ class HomePageSeeMorePodcast extends StatelessWidget {
       padding: EdgeInsets.only(left: bodyMargin, bottom: 8),
       child: Row(
         children: [
-          const Icon(Icons.podcasts, color: solidColors.moreArticles, size: 24),
+          const Icon(Icons.podcasts, color: SolidColors.moreArticles, size: 24),
           const SizedBox(width: 8),
           Text(Strings.hotPod, style: textTheme.headline3),
         ],
@@ -186,7 +187,7 @@ class HomePageBlogList extends StatelessWidget {
                               Row(
                                 children: [
                                   const Icon(Icons.remove_red_eye_outlined,
-                                      color: solidColors.posterTitle, size: 16),
+                                      color: SolidColors.posterTitle, size: 16),
                                   const SizedBox(width: 4),
                                   Text(
                                     blogList[index].views,
@@ -233,7 +234,7 @@ class HomePageSeeMore extends StatelessWidget {
       child: Row(
         children: [
           const Icon(Icons.note_alt_outlined,
-              color: solidColors.moreArticles, size: 24),
+              color: SolidColors.moreArticles, size: 24),
           const SizedBox(width: 8),
           Text(Strings.hotNews, style: textTheme.headline3),
         ],
@@ -332,7 +333,7 @@ class HomePagePoster extends StatelessWidget {
                   Row(
                     children: [
                       const Icon(Icons.remove_red_eye_outlined,
-                          color: solidColors.posterTitle, size: 16),
+                          color: SolidColors.posterTitle, size: 16),
                       const SizedBox(width: 4),
                       Text(
                         FakeDataMap["viewCount"],
