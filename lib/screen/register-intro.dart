@@ -1,7 +1,9 @@
+import 'package:blog_tech/screen/my_categories.dart';
+
 import '../strings.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-
+import 'package:validators/validators.dart';
 import '../gen/assets.gen.dart';
 
 class RegisterIntro extends StatelessWidget {
@@ -30,27 +32,130 @@ class RegisterIntro extends StatelessWidget {
           ),
           ElevatedButton(
             onPressed: () {
-              showModalBottomSheet(
-                backgroundColor: Colors.transparent,
-                context: context,
-                builder: ((context) {
-                  return Container(
-                    height: size.height / 2,
-                    decoration: const BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(30),
-                        topRight: Radius.circular(30),
-                      ),
-                    ),
-                  );
-                }),
-              );
+              _showEmailBottomSheet(context, size, textTheme);
             },
             child: const Text("Start"),
           ),
         ],
       ))),
+    );
+  }
+
+  Future<dynamic> _showEmailBottomSheet(
+      BuildContext context, Size size, TextTheme textTheme) {
+    // RegExp isEmail = RegExp('^[a-zA-Z0-9]+@');
+
+    return showModalBottomSheet(
+      isScrollControlled: true,
+      backgroundColor: Colors.transparent,
+      context: context,
+      builder: ((context) {
+        return Padding(
+          padding:
+              EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
+          child: Container(
+            height: size.height / 2,
+            decoration: const BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(30),
+                topRight: Radius.circular(30),
+              ),
+            ),
+            child: Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(Strings.interEmail, style: textTheme.headline4),
+                  Padding(
+                    padding: const EdgeInsets.all(24),
+                    child: TextField(
+                      onChanged: (value) {
+                        print(
+                            "$value is email: ${isEmail(value)}"); // print(value +
+                        //     "is email = " +
+                        //     isEmail.hasMatch(value).toString());
+                      },
+                      style: textTheme.headline5,
+                      autofocus: true,
+                      textAlign: TextAlign.center,
+                      decoration: InputDecoration(
+                        hintText: "email@domain.com",
+                        hintStyle: textTheme.headline5,
+                      ),
+                    ),
+                  ),
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.pop(context);
+                        _activatedBottomSheet(context, size, textTheme);
+                      },
+                      child: const Text("Continue"))
+                ],
+              ),
+            ),
+          ),
+        );
+      }),
+    );
+  }
+
+  Future<dynamic> _activatedBottomSheet(
+      BuildContext context, Size size, TextTheme textTheme) {
+    // RegExp isEmail = RegExp('^[a-zA-Z0-9]+@');
+
+    return showModalBottomSheet(
+      isScrollControlled: true,
+      backgroundColor: Colors.transparent,
+      context: context,
+      builder: ((context) {
+        return Padding(
+          padding:
+              EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
+          child: Container(
+            height: size.height / 2,
+            decoration: const BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(30),
+                topRight: Radius.circular(30),
+              ),
+            ),
+            child: Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(Strings.activated, style: textTheme.headline4),
+                  Padding(
+                    padding: const EdgeInsets.all(24),
+                    child: TextField(
+                      onChanged: (value) {
+                        print(
+                            "$value is email: ${isEmail(value)}"); // print(value +
+                        //     "is email = " +
+                        //     isEmail.hasMatch(value).toString());
+                      },
+                      style: textTheme.headline5,
+                      autofocus: true,
+                      textAlign: TextAlign.center,
+                      decoration: InputDecoration(
+                        hintText: "******",
+                        hintStyle: textTheme.headline5,
+                      ),
+                    ),
+                  ),
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.of(context).pushReplacement(MaterialPageRoute(
+                            builder: (context) => const MyCategories()));
+                      },
+                      child: const Text("Continue"))
+                ],
+              ),
+            ),
+          ),
+        );
+      }),
     );
   }
 }

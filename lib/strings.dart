@@ -13,4 +13,10 @@ welcome to our blog
 for using other services you should 
 register on app
   """;
+
+  static const String interEmail = "Please enter your email address here";
+  static const String activated = "Enter your activated code";
+  static const String successRegisterd = "Successfully registered";
+  static const String firstAndLastName = "FirstName and LastName";
+  static const String favCategory = "Favorite Category";
 }

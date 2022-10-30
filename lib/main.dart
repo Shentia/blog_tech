@@ -27,6 +27,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
+        inputDecorationTheme: InputDecorationTheme(
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(15),
+              borderSide: const BorderSide(width: 2),
+            ),
+            filled: true,
+            fillColor: SolidColors.statusBarColor),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ButtonStyle(
             textStyle: MaterialStateProperty.resolveWith((states) {
@@ -75,6 +82,11 @@ class MyApp extends StatelessWidget {
               fontFamily: 'whitney',
               fontSize: 20.0,
               fontWeight: FontWeight.w300),
+          headline5: TextStyle(
+              fontFamily: 'whitney',
+              fontSize: 18.0,
+              color: SolidColors.hintText,
+              fontWeight: FontWeight.w500),
         ),
       ),
       debugShowCheckedModeBanner: false,

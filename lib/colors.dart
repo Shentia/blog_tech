@@ -19,6 +19,7 @@ class SolidColors {
   static const Color posterSubTitle = Color.fromARGB(200, 255, 255, 255);
   static const Color moreArticles = Color.fromARGB(255, 40, 107, 184);
   static const Color divider = Color.fromARGB(255, 112, 112, 112);
+  static const Color hintText = Color.fromARGB(255, 72, 57, 57);
 }
 
 class GradientColors {
