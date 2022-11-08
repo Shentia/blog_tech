@@ -11,7 +11,7 @@ class MyCategories extends StatelessWidget {
   Widget build(BuildContext context) {
     var textTheme = Theme.of(context).textTheme;
     var size = MediaQuery.of(context).size;
-    double bodyMargin = MediaQuery.of(context).size.width / 10;
+    double bodyMargin = size.width / 10;
     return SafeArea(
         child: Scaffold(
             body: SingleChildScrollView(
