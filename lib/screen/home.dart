@@ -1,19 +1,20 @@
 import 'package:blog_tech/gen/assets.gen.dart';
 import 'package:blog_tech/screen/home-screen.dart';
 import 'package:blog_tech/screen/profile-screen.dart';
+import 'package:blog_tech/strings.dart';
 import 'package:flutter/material.dart';
 import '../colors.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key}) : super(key: key);
-
+  const HomeScreen({super.key});
   @override
   State<HomeScreen> createState() => _HomeScreenState();
 }
 
+final GlobalKey<ScaffoldState> _key = GlobalKey();
+
 class _HomeScreenState extends State<HomeScreen> {
   var selectedPageIndex = 0;
-
   @override
   Widget build(BuildContext context) {
     var textTheme = Theme.of(context).textTheme;
@@ -27,7 +28,59 @@ class _HomeScreenState extends State<HomeScreen> {
 
     return SafeArea(
       child: Scaffold(
+        key: _key,
+        drawer: Drawer(
+          backgroundColor: SolidColors.scaffold,
+          child: Padding(
+            padding: EdgeInsets.only(right: bodyMargin, left: bodyMargin),
+            child: ListView(
+              children: [
+                DrawerHeader(
+                  child: Center(
+                    child: Image.asset(
+                      Assets.images.splash.path,
+                      scale: 3,
+                    ),
+                  ),
+                ),
+                ListTile(
+                  title: Text(
+                    Strings.profile,
+                    style: textTheme.headline4,
+                  ),
+                  onTap: () {},
+                ),
+                const Divider(color: SolidColors.divider),
+                ListTile(
+                  title: Text(
+                    Strings.about,
+                    style: textTheme.headline4,
+                  ),
+                  onTap: () {},
+                ),
+                const Divider(color: SolidColors.divider),
+                ListTile(
+                  title: Text(
+                    Strings.shareTechBlog,
+                    style: textTheme.headline4,
+                  ),
+                  onTap: () {},
+                ),
+                const Divider(color: SolidColors.divider),
+                ListTile(
+                  title: Text(
+                    Strings.github,
+                    style: textTheme.headline4,
+                  ),
+                  onTap: () {},
+                ),
+                const Divider(color: SolidColors.divider),
+              ],
+            ),
+          ),
+        ),
         appBar: AppBar(
+          automaticallyImplyLeading: false,
           elevation: 0,
           backgroundColor: SolidColors.scaffold,
           title: Padding(
@@ -35,9 +88,14 @@ class _HomeScreenState extends State<HomeScreen> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                const Icon(
-                  Icons.menu,
-                  color: SolidColors.scaffoldIcon,
+                InkWell(
+                  onTap: () {
+                    _key.currentState?.openDrawer();
+                  },
+                  child: const Icon(
+                    Icons.menu,
+                    color: SolidColors.scaffoldIcon,
+                  ),
                 ),
                 Image(
                   image: AssetImage(Assets.images.splash.path),
@@ -95,7 +153,7 @@ class ButtomNavigation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Positioned(
-      bottom: 10,
+      bottom: 8,
       right: 0,
       left: 0,
       child: Container(

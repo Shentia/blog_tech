@@ -24,6 +24,7 @@ List<Hashtag> hashtag = [
   Hashtag(title: "UX"),
 ];
 
+List<Hashtag> myCategories = [];
 //Blog Fale Data News
 
 List<BlogModel> blogList = [

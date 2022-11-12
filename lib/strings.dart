@@ -13,6 +13,10 @@ welcome to our blog
 for using other services you should 
 register on app
   """;
+  static const String profile = "Profile";
+  static const String about = "About TechBlog";
+  static const String shareTechBlog = "share TechBlog";
+  static const String github = "TechBlog on Github";
 
   static const String interEmail = "Please enter your email address here";
   static const String activated = "Enter your activated code";

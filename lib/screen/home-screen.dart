@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../my_component.dart';
 import '../strings.dart';
 
 import '../colors.dart';
@@ -264,24 +265,9 @@ class HomePageTagList extends StatelessWidget {
             return Padding(
               padding:
                   EdgeInsets.fromLTRB(index == 0 ? bodyMargin : 10, 8, 0, 0),
-              child: Container(
-                decoration: const BoxDecoration(
-                  borderRadius: BorderRadius.all(Radius.circular(15)),
-                  gradient: GradientColors.hashtagGradient,
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.fromLTRB(8, 0, 8, 0),
-                  child: Row(
-                    children: [
-                      const Icon(Icons.collections_bookmark_outlined,
-                          color: Colors.white),
-                      Center(
-                        child: Text(hashtag[index].title,
-                            style: textTheme.headline1),
-                      ),
-                    ],
-                  ),
-                ),
+              child: MainTags(
+                textTheme: textTheme,
+                index: index,
               ),
             );
           }),
