@@ -11,7 +11,7 @@ class Strings {
   static const String welcome = """
 welcome to our blog
 for using other services you should 
-register on app
+register on app.
   """;
   static const String profile = "Profile";
   static const String about = "About TechBlog";
