@@ -1,7 +1,5 @@
-import 'package:blog_tech/colors.dart';
-import 'package:blog_tech/screen/home.dart';
-import 'package:blog_tech/screen/my_categories.dart';
-import 'package:blog_tech/screen/register-intro.dart';
+import 'package:blog_tech/component/colors.dart';
+import 'package:blog_tech/view/home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -91,7 +89,7 @@ class MyApp extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       // home: SplashScreen());
-      home: const MyCategories(),
+      home: const HomeScreen(),
     );
   }
 }

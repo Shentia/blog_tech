@@ -1,12 +1,12 @@
 import 'package:blog_tech/gen/assets.gen.dart';
-import 'package:blog_tech/my_component.dart';
+import 'package:blog_tech/component/my_component.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import '../colors.dart';
+import '../component/colors.dart';
 import '../models/data_models.dart';
 import '../models/fake_data.dart';
-import '../strings.dart';
+import '../component/strings.dart';
 
 class MyCategories extends StatefulWidget {
   const MyCategories({super.key});

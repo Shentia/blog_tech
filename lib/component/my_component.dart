@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import './colors.dart';
-import 'models/fake_data.dart';
+import 'colors.dart';
+import '../models/fake_data.dart';
 
 // ignore: camel_case_types
 class profileDevider extends StatelessWidget {
@@ -20,7 +20,7 @@ class profileDevider extends StatelessWidget {
 }
 
 class MainTags extends StatelessWidget {
-   MainTags({
+  MainTags({
     Key? key,
     required this.textTheme,
     required this.index,

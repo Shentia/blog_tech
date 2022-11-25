@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import '../my_component.dart';
-import '../strings.dart';
+import '../component/my_component.dart';
+import '../component/strings.dart';
 
-import '../colors.dart';
+import '../component/colors.dart';
 import '../models/fake_data.dart';
 
 // ignore: camel_case_types

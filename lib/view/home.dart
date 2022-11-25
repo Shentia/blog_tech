@@ -1,9 +1,9 @@
 import 'package:blog_tech/gen/assets.gen.dart';
-import 'package:blog_tech/screen/home-screen.dart';
-import 'package:blog_tech/screen/profile-screen.dart';
-import 'package:blog_tech/strings.dart';
+import 'package:blog_tech/view/home-screen.dart';
+import 'package:blog_tech/view/profile-screen.dart';
+import 'package:blog_tech/component/strings.dart';
 import 'package:flutter/material.dart';
-import '../colors.dart';
+import '../component/colors.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
