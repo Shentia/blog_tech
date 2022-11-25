@@ -7,9 +7,9 @@ name: Dart
 
 on:
   push:
-    branches: [ "master" ]
+    branches: ["master"]
   pull_request:
-    branches: [ "master" ]
+    branches: ["master"]
 
 jobs:
   build:
@@ -34,6 +34,13 @@ jobs:
       # Consider passing '--fatal-infos' for slightly stricter analysis.
       - name: Analyze project source
         run: dart analyze
+
+      - name: Setup Flutter ${{ matrix.flutter-version }}
+        id: flutter
+        if: "!startsWith(matrix.bot, 'dart')"
+        uses: DanTup/gh-actions/setup-flutter@master
+        with:
+          channel: ${{ matrix.flutter-version }}
 
       # Your project will need to have tests in test/ and a dependency on
       # package:test for this step to succeed. Note that Flutter projects will
