@@ -3,18 +3,20 @@ import 'package:blog_tech/view/home-screen.dart';
 import 'package:blog_tech/view/profile-screen.dart';
 import 'package:blog_tech/component/strings.dart';
 import 'package:flutter/material.dart';
+import 'package:get/state_manager.dart';
 import '../component/colors.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
-  @override
-  State<HomeScreen> createState() => _HomeScreenState();
-}
+// class HomeScreen extends StatefulWidget {
+//   const HomeScreen({super.key});
+//   @override
+//   State<HomeScreen> createState() => _HomeScreenState();
+// }
 
 final GlobalKey<ScaffoldState> _key = GlobalKey();
 
-class _HomeScreenState extends State<HomeScreen> {
-  var selectedPageIndex = 0;
+class HomeScreen extends StatelessWidget {
+  RxInt selectedPageIndex = 0.obs;
+
   @override
   Widget build(BuildContext context) {
     var textTheme = Theme.of(context).textTheme;
@@ -112,8 +114,9 @@ class _HomeScreenState extends State<HomeScreen> {
         body: Stack(
           children: [
             Positioned.fill(
-              child: IndexedStack(
-                index: selectedPageIndex,
+                child: Obx(
+              () => IndexedStack(
+                index: selectedPageIndex.value,
                 children: [
                   homeScreen(
                       size: size, textTheme: textTheme, bodyMargin: bodyMargin),
@@ -121,14 +124,12 @@ class _HomeScreenState extends State<HomeScreen> {
                       size: size, textTheme: textTheme, bodyMargin: bodyMargin),
                 ],
               ),
-            ),
+            )),
             ButtomNavigation(
               size: size,
               bodyMargin: bodyMargin,
               changeMainScreen: (int value) {
-                setState(() {
-                  selectedPageIndex = value;
-                });
+                selectedPageIndex.value = value;
               },
             ),
           ],
