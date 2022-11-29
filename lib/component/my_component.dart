@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'colors.dart';
 import '../models/fake_data.dart';
 
@@ -48,5 +49,14 @@ class MainTags extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+lunchUrlLink(String url) async {
+  var uri = Uri.parse(url);
+  if (await canLaunchUrl(uri)) {
+    await launchUrl(uri);
+  } else {
+    throw 'Could not launch $uri';
   }
 }

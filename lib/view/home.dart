@@ -1,9 +1,13 @@
+import 'package:blog_tech/component/api_constant.dart';
+import 'package:blog_tech/component/my_component.dart';
 import 'package:blog_tech/gen/assets.gen.dart';
+import 'package:blog_tech/services/dio_service.dart';
 import 'package:blog_tech/view/home-screen.dart';
 import 'package:blog_tech/view/profile-screen.dart';
 import 'package:blog_tech/component/strings.dart';
 import 'package:flutter/material.dart';
 import 'package:get/state_manager.dart';
+import 'package:share_plus/share_plus.dart';
 import '../component/colors.dart';
 
 // class HomeScreen extends StatefulWidget {
@@ -17,8 +21,12 @@ final GlobalKey<ScaffoldState> _key = GlobalKey();
 class HomeScreen extends StatelessWidget {
   RxInt selectedPageIndex = 0.obs;
 
+  HomeScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
+    DioService().getMethod(ApiConstant.getHomeItem);
+
     var textTheme = Theme.of(context).textTheme;
     var size = MediaQuery.of(context).size;
     double bodyMargin = size.width / 10;
@@ -66,7 +74,9 @@ class HomeScreen extends StatelessWidget {
                     Strings.shareTechBlog,
                     style: textTheme.headline4,
                   ),
-                  onTap: () {},
+                  onTap: () async {
+                    await Share.share(Strings.shareText);
+                  },
                 ),
                 const Divider(color: SolidColors.divider),
                 ListTile(
@@ -74,7 +84,9 @@ class HomeScreen extends StatelessWidget {
                     Strings.github,
                     style: textTheme.headline4,
                   ),
-                  onTap: () {},
+                  onTap: () {
+                    lunchUrlLink(Strings.githubUrl);
+                  },
                 ),
                 const Divider(color: SolidColors.divider),
               ],

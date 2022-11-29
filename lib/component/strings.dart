@@ -23,4 +23,6 @@ register on app
   static const String successRegisterd = "Successfully registered";
   static const String firstAndLastName = "FirstName and LastName";
   static const String favCategory = "Favorite Category";
+  static const String shareText = "follow tech blog ";
+  static const String githubUrl = "https://github.com/Shentia/blog_tech";
 }

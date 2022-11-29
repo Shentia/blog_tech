@@ -32,6 +32,7 @@ class GradientColors {
       Color.fromARGB(255, 68, 4, 87),
     ],
   );
+
   static const LinearGradient tags = LinearGradient(
     begin: Alignment.topLeft,
     end: Alignment.bottomRight,

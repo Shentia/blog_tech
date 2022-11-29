@@ -1,0 +1,1497 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Techblog",
+		"_postman_id": "d007c43e-be1d-b035-3642-910da106d2b4",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "articles",
+			"description": "",
+			"item": [
+				{
+					"name": "GET",
+					"description": "",
+					"item": [
+						{
+							"name": "get article info",
+							"request": {
+								"url": {
+									"raw": "https://techblog.sasansafari.com/Techblog/api/article/get.php?command=info&id=1&user_id=1",
+									"protocol": "https",
+									"host": [
+										"techblog",
+										"sasansafari",
+										"com"
+									],
+									"path": [
+										"Techblog",
+										"api",
+										"article",
+										"get.php"
+									],
+									"query": [
+										{
+											"key": "command",
+											"value": "info",
+											"equals": true,
+											"description": "required"
+										},
+										{
+											"key": "id",
+											"value": "1",
+											"equals": true,
+											"description": "required"
+										},
+										{
+											"key": "user_id",
+											"value": "1",
+											"equals": true,
+											"description": "required (user_id or null)"
+										}
+									],
+									"variable": []
+								},
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"description": "isFavorite : true or false\nstatuses : {\n\t0: 'پیش نویس',\n\t1: 'منتشر شده',\n\t2: 'در انتظار تایید'\n}\n\n\n\n\n{\n    \"info\": {\n        \"id\": \"1\",\n        \"title\": \"۵ بازی مشابه Assassin’s Creed Valhalla که باید بازی کنید\",\n        \"content\": \"آخرین بازی از فرنچایز اساسینز کرید یعنی بازی اساسینز کرید والهالا، یکی از آن بازی\\u200cهای گسترده و جهان بازی است که داستان وایکینگ\\u200cها را روایت می\\u200cکند و جنبه\\u200cهای اکشن ادونچر (ماجراجویی) آن با تکیه بر المان\\u200cهای نقش\\u200cآفرینی گیمرهای زیادی را به تحسین وا داشته است. در این بین باید اشاره کنیم که بسته الحاقی Dawn of Ragnarok هم مدتی است که عرضه شده و اگر طرفدار این بازی باشید به احتمال زیاد تا به الآن باید آن را تجربه کرده و چشم\\u200cانتظار قسمت بعدی نشسته\\u200cاید. پس با ویجیاتو و معرفی ۵ بازی مشابه Assassin’s Creed Valhalla همراه باشید.\\r\\n\\r\\nاز داستان\\u200cسرایی مثال\\u200cزدنی تا شخصیت پردازی\\u200c و طراحی و موسیقی\\u200cهای به کار رفته در Assassin’s Creed Valhalla همگی باعث می\\u200cشوند تا این قسمت از مجموعه حرف\\u200cهای زیادی برای گفتن داشته باشد و هویت شکل گرفته تازه در میان این فرنچایز را به درجه بالایی برساند. یوبی\\u200cسافت مونترال به واسطه طراحی و چینش درست مکانیزم\\u200cهای گیم\\u200cپلی و سیستم کلی بازی سعی داشته تا این بار حس غوطه\\u200cوری بیشتری را برای گیمر به ارمغان بیاورد و خوشبختانه اساسینز کرید والهالا حسابی به منبع ژانر خود وفادار است؛ مساله\\u200c\\u200eای که بسیاری را ناخشنود و در عوض رضایت عده\\u200cای را به دست آورده است.\",\n        \"image\": \"/Techblog/assets/upload/images/article/valhalla.jpg\",\n        \"cat_id\": \"1\",\n        \"cat_name\": \"اخبار و مقالات\",\n        \"author\": \"بهرام امینی\",\n        \"view\": \"221\",\n        \"status\": \"1\",\n        \"created_at\": \"۱۴۰۱/۲/۱۶\"\n    },\n    \"isFavorite\": false,\n    \"related\": [\n        {\n            \"id\": \"1\",\n            \"title\": \"۵ بازی مشابه Assassin’s Creed Valhalla که باید بازی کنید\",\n            \"image\": \"/Techblog/assets/upload/images/article/valhalla.jpg\",\n            \"cat_id\": \"1\",\n            \"cat_name\": \"اخبار و مقالات\",\n            \"author\": \"بهرام امینی\",\n            \"view\": \"221\",\n            \"status\": \"1\",\n            \"created_at\": \"۱۴۰۱/۲/۱۶\"\n        },\n        {\n            \"id\": \"3\",\n            \"title\": \"Call of Duty: Mobile بیش از ۶۵۰ میلیون بار دانلود شده است\",\n            \"image\": \"/Techblog/assets/upload/images/article/20220514212832.webp\",\n            \"cat_id\": \"1\",\n            \"cat_name\": \"اخبار و مقالات\",\n            \"author\": \"ساسان صفری\",\n            \"view\": \"58\",\n            \"status\": \"1\",\n            \"created_at\": \"۱۴۰۱/۲/۲۴\"\n        },\n        {\n            \"id\": \"4\",\n            \"title\": \"دنباله\\u200cی سریال بازی تاج و تخت با حضور جان اسنو ساخته می\\u200cشود\",\n            \"image\": \"/Techblog/assets/upload/images/article/20220707214415.jpg\",\n            \"cat_id\": \"1\",\n            \"cat_name\": \"اخبار و مقالات\",\n            \"author\": \"محسن چگینی\",\n            \"view\": \"38\",\n            \"status\": \"1\",\n            \"created_at\": \"۱۴۰۱/۲/۲۹\"\n        }\n    ],\n    \"tags\": [\n        {\n            \"id\": \"1\",\n            \"title\": \"مقاله\"\n        }\n    ]\n}"
+							},
+							"response": []
+						},
+						{
+							"name": "new articles",
+							"request": {
+								"url": {
+									"raw": "https://techblog.sasansafari.com/Techblog/api/article/get.php?command=new&user_id=1",
+									"protocol": "https",
+									"host": [
+										"techblog",
+										"sasansafari",
+										"com"
+									],
+									"path": [
+										"Techblog",
+										"api",
+										"article",
+										"get.php"
+									],
+									"query": [
+										{
+											"key": "command",
+											"value": "new",
+											"equals": true,
+											"description": "required"
+										},
+										{
+											"key": "user_id",
+											"value": "1",
+											"equals": true,
+											"description": "required (user_id or null)"
+										}
+									],
+									"variable": []
+								},
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"description": "isFavorite : true or false\nstatuses : {\n\t0: 'پیش نویس',\n\t1: 'منتشر شده',\n\t2: 'در انتظار تایید'\n}\n\n\n\n[\n    {\n        \"id\": \"16\",\n        \"title\": \"اطلاعات جدیدی از بازی Assassin's Creed Mirage فاش شد\",\n        \"image\": \"/Techblog/assets/upload/images/article/20220904181457.jpg\",\n        \"cat_id\": \"3\",\n        \"cat_name\": \"اخبار بازی\",\n        \"author\": \"محسن چگینی\",\n        \"view\": \"194\",\n        \"status\": \"1\",\n        \"isFavorite\": false,\n        \"created_at\": \"۱۴۰۱/۶/۱۲\"\n    },\n    {\n        \"id\": \"15\",\n        \"title\": \"وجود قابلیت های فراوان در The Last of Us Part 1 برای گیمرهای دار\",\n        \"image\": \"/Techblog/assets/upload/images/article/20220828173549.jpg\",\n        \"cat_id\": \"3\",\n        \"cat_name\": \"اخبار بازی\",\n        \"author\": \"ساسان صفری\",\n        \"view\": \"105\",\n        \"status\": \"1\",\n        \"isFavorite\": true,\n        \"created_at\": \"۱۴۰۱/۶/۶\"\n    },\n    {\n        \"id\": \"14\",\n        \"title\": \"وجود مرحله انحصاری در نسخه پلی استیشن بازی Hogwarts Legacy\",\n        \"image\": \"/Techblog/assets/upload/images/article/20220826174831.jpg\",\n        \"cat_id\": \"3\",\n        \"cat_name\": \"اخبار بازی\",\n        \"author\": \"بهرام امینی\",\n        \"view\": \"90\",\n        \"status\": \"1\",\n        \"isFavorite\": false,\n        \"created_at\": \"۱۴۰۱/۶/۳\"\n    },\n    {\n        \"id\": \"13\",\n        \"title\": \"توسعه The Lords of the Fallen روی آنریل انجین 5\",\n        \"image\": \"/Techblog/assets/upload/images/article/20220826174937.jpg\",\n        \"cat_id\": \"3\",\n        \"cat_name\": \"اخبار بازی\",\n        \"author\": \"سینا جعفری\",\n        \"view\": \"75\",\n        \"status\": \"1\",\n        \"isFavorite\": false,\n        \"created_at\": \"۱۴۰۱/۵/۲۵\"\n    }\n]"
+							},
+							"response": []
+						},
+						{
+							"name": "favorites",
+							"request": {
+								"url": {
+									"raw": "https://techblog.sasansafari.com/Techblog/api/article/get.php?command=favorites&user_id=14",
+									"protocol": "https",
+									"host": [
+										"techblog",
+										"sasansafari",
+										"com"
+									],
+									"path": [
+										"Techblog",
+										"api",
+										"article",
+										"get.php"
+									],
+									"query": [
+										{
+											"key": "command",
+											"value": "favorites",
+											"equals": true,
+											"description": "required"
+										},
+										{
+											"key": "user_id",
+											"value": "14",
+											"equals": true,
+											"description": "required (user_id or null)"
+										}
+									],
+									"variable": []
+								},
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"description": "statuses : {\n\t0: 'پیش نویس',\n\t1: 'منتشر شده',\n\t2: 'در انتظار تایید'\n}\n\n\n[\n    {\n        \"fav_id\": \"8\",\n        \"article_id\": \"15\",\n        \"title\": \"وجود قابلیت های فراوان در The Last of Us Part 1 برای گیمرهای دار\",\n        \"image\": \"/Techblog/assets/upload/images/article/20220828173549.jpg\",\n        \"cat_id\": \"3\",\n        \"cat_name\": \"اخبار بازی\",\n        \"author\": \"ساسان صفری\",\n        \"view\": \"106\",\n        \"status\": \"1\",\n        \"created_at\": \"۱۴۰۱/۶/۶\"\n    },\n    {\n        \"fav_id\": \"7\",\n        \"article_id\": \"3\",\n        \"title\": \"Call of Duty: Mobile بیش از ۶۵۰ میلیون بار دانلود شده است\",\n        \"image\": \"/Techblog/assets/upload/images/article/20220514212832.webp\",\n        \"cat_id\": \"1\",\n        \"cat_name\": \"اخبار و مقالات\",\n        \"author\": \"ساسان صفری\",\n        \"view\": \"58\",\n        \"status\": \"1\",\n        \"created_at\": \"۱۴۰۱/۲/۲۴\"\n    }\n]"
+							},
+							"response": []
+						},
+						{
+							"name": "published_by_me",
+							"request": {
+								"url": {
+									"raw": "https://techblog.sasansafari.com/Techblog/api/article/get.php?command=published_by_me&user_id=1",
+									"protocol": "https",
+									"host": [
+										"techblog",
+										"sasansafari",
+										"com"
+									],
+									"path": [
+										"Techblog",
+										"api",
+										"article",
+										"get.php"
+									],
+									"query": [
+										{
+											"key": "command",
+											"value": "published_by_me",
+											"equals": true,
+											"description": "required"
+										},
+										{
+											"key": "user_id",
+											"value": "1",
+											"equals": true,
+											"description": "required (user_id or null)"
+										}
+									],
+									"variable": []
+								},
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"description": "statuses : {\n\t0: 'پیش نویس',\n\t1: 'منتشر شده',\n\t2: 'در انتظار تایید'\n}\n\n\n\n\n[\n    {\n        \"id\": \"15\",\n        \"title\": \"وجود قابلیت های فراوان در The Last of Us Part 1 برای گیمرهای دار\",\n        \"image\": \"/Techblog/assets/upload/images/article/20220828173549.jpg\",\n        \"cat_id\": \"3\",\n        \"cat_name\": \"اخبار بازی\",\n        \"author\": \"ساسان صفری\",\n        \"view\": \"106\",\n        \"status\": \"1\",\n        \"created_at\": \"۱۴۰۱/۶/۶\"\n    },\n    {\n        \"id\": \"11\",\n        \"title\": \"نمایش سرزمین میانه در تریلر جدید سریال ارباب حلقه ها\",\n        \"image\": \"/Techblog/assets/upload/images/article/20220826180056.jpg\",\n        \"cat_id\": \"6\",\n        \"cat_name\": \"فیلم و سریال\",\n        \"author\": \"ساسان صفری\",\n        \"view\": \"18\",\n        \"status\": \"1\",\n        \"created_at\": \"۱۴۰۱/۵/۱۱\"\n    }\n]"
+							},
+							"response": []
+						},
+						{
+							"name": "get articles with cat_id",
+							"request": {
+								"url": {
+									"raw": "https://techblog.sasansafari.com/Techblog/api/article/get.php?command=get_articles_with_cat_id&cat_id=1&user_id=1",
+									"protocol": "https",
+									"host": [
+										"techblog",
+										"sasansafari",
+										"com"
+									],
+									"path": [
+										"Techblog",
+										"api",
+										"article",
+										"get.php"
+									],
+									"query": [
+										{
+											"key": "command",
+											"value": "get_articles_with_cat_id",
+											"equals": true,
+											"description": "required"
+										},
+										{
+											"key": "cat_id",
+											"value": "1",
+											"equals": true,
+											"description": "required"
+										},
+										{
+											"key": "user_id",
+											"value": "1",
+											"equals": true,
+											"description": "required (user_id or null)"
+										}
+									],
+									"variable": []
+								},
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"description": "isFavorite : true or false\nstatuses : {\n\t0: 'پیش نویس',\n\t1: 'منتشر شده',\n\t2: 'در انتظار تایید'\n}\n\n\n\n\n[\n    {\n        \"id\": \"10\",\n        \"title\": \"داستان فیلم Gran Turismo بسیار هیجان\\u200cانگیز خواهد بود!\",\n        \"image\": \"/Techblog/assets/upload/images/article/20220707215854.jpg\",\n        \"cat_id\": \"1\",\n        \"cat_name\": \"اخبار و مقالات\",\n        \"author\": \"بهرام امینی\",\n        \"view\": \"157\",\n        \"status\": \"1\",\n        \"isFavorite\": false,\n        \"created_at\": \"۱۴۰۱/۲/۳۱\"\n    },\n    {\n        \"id\": \"8\",\n        \"title\": \"آیا آیفون 7 به روزرسانی iOS 16 را دریافت می\\u200cکند؟\",\n        \"image\": \"/Techblog/assets/upload/images/article/20220707215340.jpg\",\n        \"cat_id\": \"1\",\n        \"cat_name\": \"اخبار و مقالات\",\n        \"author\": \"پوریا میرخباز\",\n        \"view\": \"26\",\n        \"status\": \"1\",\n        \"isFavorite\": false,\n        \"created_at\": \"۱۴۰۱/۲/۳۰\"\n    },\n    {\n        \"id\": \"7\",\n        \"title\": \"یوبیسافت ۱۵ سالگی فرنچایز Assassin’s Creed را با بازی رایگان جشن\",\n        \"image\": \"/Techblog/assets/upload/images/article/20220707215133.jpg\",\n        \"cat_id\": \"1\",\n        \"cat_name\": \"اخبار و مقالات\",\n        \"author\": \"سینا جعفری\",\n        \"view\": \"33\",\n        \"status\": \"1\",\n        \"isFavorite\": false,\n        \"created_at\": \"۱۴۰۱/۲/۳۰\"\n    }\n]"
+							},
+							"response": []
+						},
+						{
+							"name": "get articles with tag_id",
+							"request": {
+								"url": {
+									"raw": "https://techblog.sasansafari.com/Techblog/api/article/get.php?command=get_articles_with_tag_id&tag_id=1&user_id=1",
+									"protocol": "https",
+									"host": [
+										"techblog",
+										"sasansafari",
+										"com"
+									],
+									"path": [
+										"Techblog",
+										"api",
+										"article",
+										"get.php"
+									],
+									"query": [
+										{
+											"key": "command",
+											"value": "get_articles_with_tag_id",
+											"equals": true,
+											"description": "required"
+										},
+										{
+											"key": "tag_id",
+											"value": "1",
+											"equals": true,
+											"description": "required"
+										},
+										{
+											"key": "user_id",
+											"value": "1",
+											"equals": true,
+											"description": "required (user_id or null)"
+										}
+									],
+									"variable": []
+								},
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"description": "isFavorite : true or false\nstatuses : {\n\t0: 'پیش نویس',\n\t1: 'منتشر شده',\n\t2: 'در انتظار تایید'\n}\n\n\n[\n    {\n        \"id\": \"3\",\n        \"title\": \"Call of Duty: Mobile بیش از ۶۵۰ میلیون بار دانلود شده است\",\n        \"image\": \"/Techblog/assets/upload/images/article/20220514212832.webp\",\n        \"cat_id\": \"1\",\n        \"cat_name\": \"اخبار و مقالات\",\n        \"author\": \"ساسان صفری\",\n        \"view\": \"58\",\n        \"status\": \"1\",\n        \"isFavorite\": false,\n        \"created_at\": \"۱۴۰۱/۲/۲۴\"\n    },\n    {\n        \"id\": \"13\",\n        \"title\": \"توسعه The Lords of the Fallen روی آنریل انجین 5\",\n        \"image\": \"/Techblog/assets/upload/images/article/20220826174937.jpg\",\n        \"cat_id\": \"3\",\n        \"cat_name\": \"اخبار بازی\",\n        \"author\": \"سینا جعفری\",\n        \"view\": \"75\",\n        \"status\": \"1\",\n        \"isFavorite\": false,\n        \"created_at\": \"۱۴۰۱/۵/۲۵\"\n    },\n    {\n        \"id\": \"14\",\n        \"title\": \"وجود مرحله انحصاری در نسخه پلی استیشن بازی Hogwarts Legacy\",\n        \"image\": \"/Techblog/assets/upload/images/article/20220826174831.jpg\",\n        \"cat_id\": \"3\",\n        \"cat_name\": \"اخبار بازی\",\n        \"author\": \"بهرام امینی\",\n        \"view\": \"90\",\n        \"status\": \"1\",\n        \"isFavorite\": false,\n        \"created_at\": \"۱۴۰۱/۶/۳\"\n    }\n]"
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "POST",
+					"description": "",
+					"item": [
+						{
+							"name": "store favorite",
+							"request": {
+								"url": "https://techblog.sasansafari.com/Techblog/api/article/post.php",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE1IiwiZW1haWwiOiJwLm1pcmtoYWJhekBnbWFpbC5jb20ifQ.wCKqKSTUGLdTutdYu9pJe_MGCh95fS2bimeLOjzwkOI",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "article_id",
+											"value": "24",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "user_id",
+											"value": "14",
+											"description": "required"
+										},
+										{
+											"key": "command",
+											"value": "store_favorite",
+											"description": "required",
+											"type": "text"
+										}
+									]
+								},
+								"description": "{\n    \"success\": true,\n    \"status_code\": 200,\n    \"msg\": \"article is available\",\n    \"data\": {}\n}\n\n{\n    \"success\": true,\n    \"status_code\": 201,\n    \"msg\": \"favorite article stored\",\n    \"data\": {}\n}\n\n{\n\t\"success\": false,\n    \"status_code\": 401,\n    \"msg\": \"You are not Authorized!\"\n    \"data\": {}\n}\n\n{\n    \"success\": false,\n    \"status_code\": 403,\n    \"msg\": \"invalid token\",\n    \"data\": {}\n}\n\n{\n    \"success\": false,\n    \"status_code\": 400,\n    \"msg\": \"required fields not valid\",\n    \"data\": {}\n}\n \n\n{\n    \"success\": false,\n    \"status_code\": 404,\n    \"msg\": \"article notFound\",\n    \"data\": {}\n}\n\n\n{\n    \"success\": false,\n    \"status_code\": 500,\n    \"msg\": \"Internal Server Error\",\n    \"data\": {}\n}"
+							},
+							"response": []
+						},
+						{
+							"name": "store article",
+							"request": {
+								"url": "https://techblog.sasansafari.com/Techblog/api/article/post.php",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE1IiwiZW1haWwiOiJwLm1pcmtoYWJhekBnbWFpbC5jb20ifQ.wCKqKSTUGLdTutdYu9pJe_MGCh95fS2bimeLOjzwkOI",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "شروع مرحله نهایی میکس صدا سریال The Last of Us",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "content",
+											"value": "تیم سازنده سریال اقتباسی The Last of Us با انتشار یک تصویر اعلام کرد که اثر نام‌برده به مرحله نهایی میکس صدا در استودیو رسید.\n\nPlayStation Productions (تیم مشترک بخش سرگرمی تعاملی شرکت Sony و بخش سونی پیکچرز برای تولید اقتباس‌های سینمایی و تلویزیونی از روی بازی‌های پلی استیشن) از مدت‌ها قبل مشغول همکاری با شبکه HBO برای ساخت سریال The Last of Us است. حالا براساس جدیدترین اخبار سینما و تلویزیون می‌دانیم که فصل اول لست آو آس به‌تازگی وارد مرحله نهایی میکس صدا شد.\n\nسریال The Last of Us که برای پخش در اوایل سال ۲۰۲۳ میلادی آماده می‌شود، پدرو پاسکال و بلا رمزی را به ترتیب در نقش‌های جول و الی دارد. این اثر توسط کریگ مازن و نیل دراکمن با اقتباس از سری بازی The Last of Us، اثر استودیو ناتی‌داگ ساخته می‌شود. استورم رید در نقش رایلی، آنا تورو در نقش تس و نیک آفرمن در نقش بیل، از جمله بازیگرهای دیگر فصل ۱ سریال The Last of Us هستند.\n\n\nچند روز قبل بازی The Last of Us Part I روی کنسول پلی استیشن 5 عرضه شد تا طرفدارهای ناتی‌داگ بتوانند بخش اول داستان لست آو آس را نیز با بالاترین کیفیت ممکن تجربه کنند. در سال ۲۰۲۳ میلادی علاوه‌بر سریال لست آو آس شاهد بازی آنلاین جدید و بزرگ استودیو NaughtyDog در دنیای لست آو آس نیز خواهیم بود که شخصیت‌ها و بخش‌های دیگری از این جهان داستانی را به تصویر می‌کشد.\n\n",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "cat_id",
+											"value": "6",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "tag_list",
+											"value": "[2,6]",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "user_id",
+											"value": "14",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"description": "required",
+											"type": "file",
+											"src": "the-last-of-us-tv-series-pedro-pascal.jpg"
+										},
+										{
+											"key": "command",
+											"value": "store",
+											"description": "required",
+											"type": "text"
+										}
+									]
+								},
+								"description": "{\n    \"success\": true,\n    \"status_code\": 201,\n    \"msg\": \"new article stored\",\n    \"data\": {}\n}\n\n\n{\n\t\"success\": false,\n    \"status_code\": 401,\n    \"msg\": \"You are not Authorized!\"\n    \"data\": {}\n}\n\n{\n    \"success\": false,\n    \"status_code\": 403,\n    \"msg\": \"invalid token\",\n    \"data\": {}\n}\n\n{\n    \"success\": false,\n    \"status_code\": 400,\n    \"msg\": \"required fields not valid\",\n    \"data\": {}\n}\n\n\n{\n    \"success\": false,\n    \"status_code\": 500,\n    \"msg\": \"Internal Server Error!\",\n    \"data\": {}\n}"
+							},
+							"response": []
+						},
+						{
+							"name": "update article",
+							"request": {
+								"url": "https://techblog.sasansafari.com/Techblog/api/article/post.php",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE1IiwiZW1haWwiOiJwLm1pcmtoYWJhekBnbWFpbC5jb20ifQ.wCKqKSTUGLdTutdYu9pJe_MGCh95fS2bimeLOjzwkOI",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "article_id",
+											"value": "24",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "title",
+											"value": "update",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "content",
+											"value": "content",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "cat_id",
+											"value": "2",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "user_id",
+											"value": "14",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"description": "required",
+											"type": "file",
+											"src": "the-last-of-us-tv-series-pedro-pascal.jpg"
+										},
+										{
+											"key": "command",
+											"value": "update",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "tag_list",
+											"value": "[2,6]",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"description": "{\n    \"success\": true,\n    \"status_code\": 201,\n    \"msg\": \"successFully updated\",\n    \"data\": {}\n}\n\n{\n\t\"success\": false,\n    \"status_code\": 401,\n    \"msg\": \"You are not Authorized!\"\n    \"data\": {}\n}\n\n{\n    \"success\": false,\n    \"status_code\": 403,\n    \"msg\": \"invalid token\",\n    \"data\": {}\n}\n\n{\n    \"success\": false,\n    \"status_code\": 400,\n    \"msg\": \"required fields not valid\",\n    \"data\": {}\n}\n \n\n{\n    \"success\": false,\n    \"status_code\": 404,\n    \"msg\": \"article notFound\",\n    \"data\": {}\n}\n\n\n{\n    \"success\": false,\n    \"status_code\": 500,\n    \"msg\": \"Internal Server Error\",\n    \"data\": {}\n}"
+							},
+							"response": []
+						},
+						{
+							"name": "change status",
+							"request": {
+								"url": "https://techblog.sasansafari.com/Techblog/api/article/post.php",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE1IiwiZW1haWwiOiJwLm1pcmtoYWJhekBnbWFpbC5jb20ifQ.wCKqKSTUGLdTutdYu9pJe_MGCh95fS2bimeLOjzwkOI",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "article_id",
+											"value": "24",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "0",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "command",
+											"value": "change_status",
+											"description": "required",
+											"type": "text"
+										}
+									]
+								},
+								"description": "change status : {\n\t0: 'پیش نویس',\n\t1: 'منتشر شده',\n\t2: 'در انتظار تایید'\n}\n\n\n{\n    \"status_code\": 201,\n    \"response\": true,\n    \"msg\": \"status changed\"\n}\n\n{\n    \"status_code\": 401,\n    \"response\": false,\n    \"msg\": \"You are not Authorized!\"\n}\n\n{\n    \"status_code\": 403,\n    \"response\": false,\n    \"msg\": \"invalid token\"\n}\n\n{\n    \"status_code\": 404,\n    \"response\": false,\n    \"msg\": \"article notFound\"\n}\n\n{\n    \"status_code\": 409,\n    \"response\": false,\n    \"msg\": \"required fields not valid\"\n}\n\n\n{\n    \"status_code\": 500,\n    \"response\": false,\n    \"msg\": \"Internal Server Error!\"\n}"
+							},
+							"response": []
+						},
+						{
+							"name": "delete favorite",
+							"request": {
+								"url": "https://techblog.sasansafari.com/Techblog/api/article/post.php",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE1IiwiZW1haWwiOiJwLm1pcmtoYWJhekBnbWFpbC5jb20ifQ.wCKqKSTUGLdTutdYu9pJe_MGCh95fS2bimeLOjzwkOI",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "fav_id",
+											"value": "20",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "user_id",
+											"value": "14",
+											"description": "required"
+										},
+										{
+											"key": "command",
+											"value": "delete_favorite",
+											"description": "required",
+											"type": "text"
+										}
+									]
+								},
+								"description": "{\n    \"success\": true,\n    \"status_code\": 200,\n    \"msg\": \"favorite article remoed\",\n    \"data\": {}\n}\n\n\n{\n\t\"success\": false,\n    \"status_code\": 401,\n    \"msg\": \"You are not Authorized!\"\n    \"data\": {}\n}\n\n{\n    \"success\": false,\n    \"status_code\": 403,\n    \"msg\": \"invalid token\",\n    \"data\": {}\n}\n\n{\n    \"success\": false,\n    \"status_code\": 400,\n    \"msg\": \"required fields not valid\",\n    \"data\": {}\n}\n \n\n{\n    \"success\": false,\n    \"status_code\": 404,\n    \"msg\": \"favorite article notFound\",\n    \"data\": {}\n}\n\n{\n    \"success\": false,\n    \"status_code\": 500,\n    \"msg\": \"Internal Server Error!\",\n    \"data\": {}\n}"
+							},
+							"response": []
+						},
+						{
+							"name": "delete article",
+							"request": {
+								"url": "https://techblog.sasansafari.com/Techblog/api/article/post.php",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE1IiwiZW1haWwiOiJwLm1pcmtoYWJhekBnbWFpbC5jb20ifQ.wCKqKSTUGLdTutdYu9pJe_MGCh95fS2bimeLOjzwkOI",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "article_id",
+											"value": "24",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "user_id",
+											"value": "14",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "command",
+											"value": "delete_article",
+											"description": "required",
+											"type": "text"
+										}
+									]
+								},
+								"description": "{\n    \"success\": true,\n    \"status_code\": 200,\n    \"msg\": \"article remoed\",\n    \"data\": {}\n}\n\n\n{\n\t\"success\": false,\n    \"status_code\": 401,\n    \"msg\": \"You are not Authorized!\"\n    \"data\": {}\n}\n\n{\n    \"success\": false,\n    \"status_code\": 403,\n    \"msg\": \"invalid token\",\n    \"data\": {}\n}\n\n{\n    \"success\": false,\n    \"status_code\": 400,\n    \"msg\": \"required fields not valid\",\n    \"data\": {}\n}\n \n\n{\n    \"success\": false,\n    \"status_code\": 404,\n    \"msg\": \"article notFound\",\n    \"data\": {}\n}\n\n{\n    \"success\": false,\n    \"status_code\": 500,\n    \"msg\": \"Internal Server Error!\",\n    \"data\": {}\n}"
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "podcasts",
+			"description": "",
+			"item": [
+				{
+					"name": "GET",
+					"description": "",
+					"item": [
+						{
+							"name": "new podcasts",
+							"request": {
+								"url": {
+									"raw": "https://techblog.sasansafari.com/Techblog/api/podcast/get.php?command=new&user_id=1",
+									"protocol": "https",
+									"host": [
+										"techblog",
+										"sasansafari",
+										"com"
+									],
+									"path": [
+										"Techblog",
+										"api",
+										"podcast",
+										"get.php"
+									],
+									"query": [
+										{
+											"key": "command",
+											"value": "new",
+											"equals": true,
+											"description": "required"
+										},
+										{
+											"key": "user_id",
+											"value": "1",
+											"equals": true,
+											"description": "required (user_id or null)"
+										}
+									],
+									"variable": []
+								},
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"description": "isFavorite : true or false\nstatuses : {\n\t0: 'پیش نویس',\n\t1: 'منتشر شده',\n\t2: 'در انتظار تایید'\n}\n\n[\n    {\n        \"id\": \"5\",\n        \"title\": \"تکچی - قسمت 70 گوگل مورد تایید ما نیست!!!!\",\n        \"poster\": \"/Techblog/assets/upload/images/podcast/tech_chi.jpg\",\n        \"publisher\": \"پوریا میرخباز\",\n        \"view\": \"10\",\n        \"status\": \"0\",\n        \"created_at\": \"۱۴۰۱/۲/۱۶\",\n        \"isFavorite\": false\n    },\n    {\n        \"id\": \"4\",\n        \"title\": \"تکچی - قسمت 69 غوغای مایکروسافت\",\n        \"poster\": \"/Techblog/assets/upload/images/podcast/tech_chi.jpg\",\n        \"publisher\": \"پوریا میرخباز\",\n        \"view\": \"2\",\n        \"status\": \"0\",\n        \"created_at\": \"۱۴۰۱/۲/۱۶\",\n        \"isFavorite\": false\n    },\n    {\n        \"id\": \"3\",\n        \"title\": \"تکچی - قسمت 62 همه ما چیپ دار خواهیم شد  ؟؟؟\",\n        \"poster\": \"/Techblog/assets/upload/images/podcast/tech_chi.jpg\",\n        \"publisher\": \"پوریا میرخباز\",\n        \"view\": \"2\",\n        \"status\": \"0\",\n        \"created_at\": \"۱۴۰۱/۲/۱۶\",\n        \"isFavorite\": false\n    },\n    {\n        \"id\": \"2\",\n        \"title\": \"پادکست خانه ترید\",\n        \"poster\": \"/Techblog/assets/upload/images/podcast/4.jpg\",\n        \"publisher\": \"پوریا میرخباز\",\n        \"view\": \"2\",\n        \"status\": \"0\",\n        \"created_at\": \"۱۴۰۱/۲/۱۶\",\n        \"isFavorite\": false\n    },\n    {\n        \"id\": \"1\",\n        \"title\": \"رادیو گیک - نفوذ تکنولوژی\",\n        \"poster\": \"/Techblog/assets/upload/images/podcast/radio_geek.jpg\",\n        \"publisher\": \"پوریا میرخباز\",\n        \"view\": \"3\",\n        \"status\": \"0\",\n        \"created_at\": \"۱۴۰۱/۲/۱۶\",\n        \"isFavorite\": true\n    }\n]"
+							},
+							"response": []
+						},
+						{
+							"name": "favorites list",
+							"request": {
+								"url": {
+									"raw": "https://techblog.sasansafari.com/Techblog/api/podcast/get.php?command=favorites&user_id=14",
+									"protocol": "https",
+									"host": [
+										"techblog",
+										"sasansafari",
+										"com"
+									],
+									"path": [
+										"Techblog",
+										"api",
+										"podcast",
+										"get.php"
+									],
+									"query": [
+										{
+											"key": "command",
+											"value": "favorites",
+											"equals": true,
+											"description": "required"
+										},
+										{
+											"key": "user_id",
+											"value": "14",
+											"equals": true,
+											"description": "required (user_id or null)"
+										}
+									],
+									"variable": []
+								},
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"description": "status : {\n\t0: 'پیش نویس',\n\t1: 'منتشر شده',\n\t2: 'در انتظار تایید'\n}\n\n\n\n\n\n[] \n\nor \n\n[\n    {\n        \"fav_id\": \"3\",\n        \"podcast_id\": \"1\",\n        \"title\": \"رادیو گیک - نفوذ تکنولوژی\",\n        \"poster\": \"/Techblog/assets/upload/images/podcast/images/radio_geek.jpg\",\n        \"cat_id\": \"1\",\n        \"cat_name\": \"اخبار و مقالات\",\n        \"author\": \"سینا جعفری\",\n        \"view\": \"7\",\n        \"status\": \"1\",\n        \"created_at\": \"۱۴۰۱/۲/۱۶\"\n    }\n]"
+							},
+							"response": []
+						},
+						{
+							"name": "published_by_me",
+							"request": {
+								"url": {
+									"raw": "https://techblog.sasansafari.com/Techblog/api/podcast/get.php?command=published_by_me&user_id=1",
+									"protocol": "https",
+									"host": [
+										"techblog",
+										"sasansafari",
+										"com"
+									],
+									"path": [
+										"Techblog",
+										"api",
+										"podcast",
+										"get.php"
+									],
+									"query": [
+										{
+											"key": "command",
+											"value": "published_by_me",
+											"equals": true,
+											"description": "required"
+										},
+										{
+											"key": "user_id",
+											"value": "1",
+											"equals": true,
+											"description": "required (user_id or null)"
+										}
+									],
+									"variable": []
+								},
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"description": "statuses : {\n\t0: 'پیش نویس',\n\t1: 'منتشر شده',\n\t2: 'در انتظار تایید'\n}\n\n\n\n[] \n\nor \n\n[\n    {\n        \"id\": \"8\",\n        \"title\": \"رادیوگیک ۱۴۳ – عاشقتم\",\n        \"poster\": \"/Techblog/assets/upload/images/podcast/images/20220707225803.jpg\",\n        \"cat_id\": \"1\",\n        \"cat_name\": \"اخبار و مقالات\",\n        \"author\": \"ساسان صفری\",\n        \"view\": \"35\",\n        \"status\": \"1\",\n        \"created_at\": \"۱۴۰۱/۴/۱۶\"\n    },\n    {\n        \"id\": \"2\",\n        \"title\": \"پادکست خانه ترید\",\n        \"poster\": \"/Techblog/assets/upload/images/podcast/images/4.jpg\",\n        \"cat_id\": \"2\",\n        \"cat_name\": \"بررسی محصول\",\n        \"author\": \"ساسان صفری\",\n        \"view\": \"6\",\n        \"status\": \"1\",\n        \"created_at\": \"۱۴۰۱/۲/۱۶\"\n    }\n]"
+							},
+							"response": []
+						},
+						{
+							"name": "get podcast Files",
+							"request": {
+								"url": {
+									"raw": "https://techblog.sasansafari.com/Techblog/api/podcast/get.php?command=get_files&podcats_id=25",
+									"protocol": "https",
+									"host": [
+										"techblog",
+										"sasansafari",
+										"com"
+									],
+									"path": [
+										"Techblog",
+										"api",
+										"podcast",
+										"get.php"
+									],
+									"query": [
+										{
+											"key": "command",
+											"value": "get_files",
+											"equals": true,
+											"description": "required"
+										},
+										{
+											"key": "podcats_id",
+											"value": "25",
+											"equals": true,
+											"description": "required"
+										}
+									],
+									"variable": []
+								},
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"description": "{\n    \"files\": [],\n    \"related\": []\n}\n\nor\n\n{\n    \"files\": [\n        {\n            \"id\": \"4\",\n            \"podcast_id\": \"8\",\n            \"file\": \"/Techblog/assets/upload/images/podcast/files/20220707230004.mp3\",\n            \"title\": \"عاشقتم\",\n            \"length\": \"54\"\n        }\n    ],\n    \"related\": [\n        {\n            \"id\": \"8\",\n            \"title\": \"رادیوگیک ۱۴۳ – عاشقتم\",\n            \"poster\": \"/Techblog/assets/upload/images/podcast/images/20220707225803.jpg\",\n            \"publisher\": \"ساسان صفری\",\n            \"view\": \"36\",\n            \"status\": \"1\",\n            \"created_at\": \"۱۴۰۱/۴/۱۶\"\n        }\n    ]\n}"
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "POST",
+					"description": "",
+					"item": [
+						{
+							"name": "delete podcast",
+							"request": {
+								"url": "https://techblog.sasansafari.com/Techblog/api/podcast/post.php",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE1IiwiZW1haWwiOiJwLm1pcmtoYWJhekBnbWFpbC5jb20ifQ.wCKqKSTUGLdTutdYu9pJe_MGCh95fS2bimeLOjzwkOI",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "podcast_id",
+											"value": "22",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "user_id",
+											"value": "14",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "command",
+											"value": "delete",
+											"description": "required",
+											"type": "text"
+										}
+									]
+								},
+								"description": "{\n    \"success\": true,\n    \"status_code\": 201,\n    \"msg\": \"podcast removed\",\n    \"data\": {}\n}\n\n{\n\t\"success\": false,\n    \"status_code\": 401,\n    \"msg\": \"You are not Authorized!\"\n    \"data\": {}\n}\n\n{\n    \"success\": false,\n    \"status_code\": 403,\n    \"msg\": \"invalid token\",\n    \"data\": {}\n}\n\n{\n    \"success\": false,\n    \"status_code\": 400,\n    \"msg\": \"required fields not valid\",\n    \"data\": {}\n}"
+							},
+							"response": []
+						},
+						{
+							"name": "delete podcast file",
+							"request": {
+								"url": {
+									"raw": "https://techblog.sasansafari.com/Techblog/api/podcast/post.php?command=delete_file",
+									"protocol": "https",
+									"host": [
+										"techblog",
+										"sasansafari",
+										"com"
+									],
+									"path": [
+										"Techblog",
+										"api",
+										"podcast",
+										"post.php"
+									],
+									"query": [
+										{
+											"key": "command",
+											"value": "delete_file",
+											"equals": true,
+											"description": ""
+										}
+									],
+									"variable": []
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE1IiwiZW1haWwiOiJwLm1pcmtoYWJhekBnbWFpbC5jb20ifQ.wCKqKSTUGLdTutdYu9pJe_MGCh95fS2bimeLOjzwkOI",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file_id",
+											"value": "7",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "command",
+											"value": "delete_file",
+											"description": "required",
+											"type": "text"
+										}
+									]
+								},
+								"description": "{\n    \"success\": true,\n    \"status_code\": 200,\n    \"msg\": \"podcast file removed\",\n    \"data\": {}\n}\n\n{\n\t\"success\": false,\n    \"status_code\": 401,\n    \"msg\": \"You are not Authorized!\"\n    \"data\": {}\n}\n\n{\n    \"success\": false,\n    \"status_code\": 403,\n    \"msg\": \"invalid token\",\n    \"data\": {}\n}\n\n{\n    \"success\": false,\n    \"status_code\": 400,\n    \"msg\": \"required fields not valid\",\n    \"data\": {}\n}"
+							},
+							"response": []
+						},
+						{
+							"name": "delete favorite podcast",
+							"request": {
+								"url": "https://techblog.sasansafari.com/Techblog/api/podcast/post.php",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE1IiwiZW1haWwiOiJwLm1pcmtoYWJhekBnbWFpbC5jb20ifQ.wCKqKSTUGLdTutdYu9pJe_MGCh95fS2bimeLOjzwkOI",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "fav_id",
+											"value": "5",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "command",
+											"value": "delete_favorite",
+											"description": "required",
+											"type": "text"
+										}
+									]
+								},
+								"description": "{\n    \"success\": true,\n    \"status_code\": 200,\n    \"msg\": \"favorite podcast removed\",\n    \"data\": {}\n}\n\n{\n\t\"success\": false,\n    \"status_code\": 401,\n    \"msg\": \"You are not Authorized!\"\n    \"data\": {}\n}\n\n{\n    \"success\": false,\n    \"status_code\": 403,\n    \"msg\": \"invalid token\",\n    \"data\": {}\n}\n\n{\n    \"success\": false,\n    \"status_code\": 404,\n    \"msg\": \"podcast not found\",\n    \"data\": {}\n}\n\n{\n    \"success\": false,\n    \"status_code\": 400,\n    \"msg\": \"required fields not valid\",\n    \"data\": {}\n}\n\n{\n    \"success\": false,\n    \"status_code\": 404,\n    \"msg\": \"file notFound\",\n    \"data\": {}\n}"
+							},
+							"response": []
+						},
+						{
+							"name": "store podcast : title",
+							"request": {
+								"url": "https://techblog.sasansafari.com/Techblog/api/podcast/post.php",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE1IiwiZW1haWwiOiJwLm1pcmtoYWJhekBnbWFpbC5jb20ifQ.wCKqKSTUGLdTutdYu9pJe_MGCh95fS2bimeLOjzwkOI",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "user_id",
+											"value": "14",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "title",
+											"value": "رادیو فلاتر",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "cat_id",
+											"value": "5",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "command",
+											"value": "store_title",
+											"description": "required",
+											"type": "text"
+										}
+									]
+								},
+								"description": "{\n    \"success\": true,\n    \"status_code\": 201,\n    \"msg\": \"new podcast stored\",\n    \"data\": {\n        \"podcast_id\": \"19\"\n    }\n}\n\n\n{\n\t\"success\": false,\n    \"status_code\": 401,\n    \"msg\": \"You are not Authorized!\"\n    \"data\": {}\n}\n\n{\n    \"success\": false,\n    \"status_code\": 403,\n    \"msg\": \"invalid token\",\n    \"data\": {}\n}\n\n{\n    \"success\": false,\n    \"status_code\": 400,\n    \"msg\": \"required fields not valid\",\n    \"data\": {}\n}"
+							},
+							"response": []
+						},
+						{
+							"name": "store favorite",
+							"request": {
+								"url": "https://techblog.sasansafari.com/Techblog/api/podcast/post.php",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE1IiwiZW1haWwiOiJwLm1pcmtoYWJhekBnbWFpbC5jb20ifQ.wCKqKSTUGLdTutdYu9pJe_MGCh95fS2bimeLOjzwkOI",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "podcast_id",
+											"value": "25",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "user_id",
+											"value": "14",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "command",
+											"value": "store_favorite",
+											"description": "required",
+											"type": "text"
+										}
+									]
+								},
+								"description": "{\n    \"success\": true,\n    \"status_code\": 200,\n    \"msg\": \"podcast is available\",\n    \"data\": {}\n}\n\n{\n    \"success\": true,\n    \"status_code\": 200,\n    \"msg\": \"podcast favorite stored\",\n    \"data\": {}\n}\n\n{\n\t\"success\": false,\n    \"status_code\": 401,\n    \"msg\": \"You are not Authorized!\"\n    \"data\": {}\n}\n\n{\n    \"success\": false,\n    \"status_code\": 403,\n    \"msg\": \"invalid token\",\n    \"data\": {}\n}\n\n{\n    \"success\": false,\n    \"status_code\": 404,\n    \"msg\": \"podcast not found\",\n    \"data\": {}\n}\n\n{\n    \"success\": false,\n    \"status_code\": 400,\n    \"msg\": \"required fields not valid\",\n    \"data\": {}\n}"
+							},
+							"response": []
+						},
+						{
+							"name": "update podcast poster",
+							"request": {
+								"url": "https://techblog.sasansafari.com/Techblog/api/podcast/post.php",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE1IiwiZW1haWwiOiJwLm1pcmtoYWJhekBnbWFpbC5jb20ifQ.wCKqKSTUGLdTutdYu9pJe_MGCh95fS2bimeLOjzwkOI",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "user_id",
+											"value": "14",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "podcast_id",
+											"value": "25",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"description": "required",
+											"type": "file",
+											"src": "Untitled-1079x658.png"
+										},
+										{
+											"key": "command",
+											"value": "update_poster",
+											"description": "required",
+											"type": "text"
+										}
+									]
+								},
+								"description": "{\n    \"success\": true,\n    \"status_code\": 200,\n    \"msg\": \"successfully update\",\n    \"data\": {}\n}\n\n{\n\t\"success\": false,\n    \"status_code\": 401,\n    \"msg\": \"You are not Authorized!\"\n    \"data\": {}\n}\n\n{\n    \"success\": false,\n    \"status_code\": 403,\n    \"msg\": \"invalid token\",\n    \"data\": {}\n}\n\n{\n    \"success\": false,\n    \"status_code\": 400,\n    \"msg\": \"required fields not valid\",\n    \"data\": {}\n}\n\n{\n    \"success\": false,\n    \"status_code\": 409,\n    \"msg\": \"podcast not exist\",\n    \"data\": {}\n}"
+							},
+							"response": []
+						},
+						{
+							"name": "store podcast file",
+							"request": {
+								"url": "https://techblog.sasansafari.com/Techblog/api/podcast/post.php",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE1IiwiZW1haWwiOiJwLm1pcmtoYWJhekBnbWFpbC5jb20ifQ.wCKqKSTUGLdTutdYu9pJe_MGCh95fS2bimeLOjzwkOI",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "command",
+											"value": "store_file",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "podcast_id",
+											"value": "25",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "title",
+											"value": "رادیو فلاتر، پادکستی که قراره به اعماق مباحث بره و عمیق تر مسائل رو تحلیل کنه",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "length",
+											"value": "18",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "file",
+											"description": "required",
+											"type": "file",
+											"src": "Radio-Flutter-E1-_-typeSafety-and-NullSafety.mp3"
+										}
+									]
+								},
+								"description": "{\n    \"success\": true,\n    \"status_code\": 201,\n    \"msg\": \"new podcast file stored\",\n    \"data\": {}\n}\n\n{\n\t\"success\": false,\n    \"status_code\": 401,\n    \"msg\": \"You are not Authorized!\"\n    \"data\": {}\n}\n\n{\n    \"success\": false,\n    \"status_code\": 403,\n    \"msg\": \"invalid token\",\n    \"data\": {}\n}\n\n{\n    \"success\": false,\n    \"status_code\": 400,\n    \"msg\": \"required fields not valid\",\n    \"data\": {}\n}"
+							},
+							"response": []
+						},
+						{
+							"name": "update podcast file",
+							"request": {
+								"url": "https://techblog.sasansafari.com/Techblog/api/podcast/post.php",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE1IiwiZW1haWwiOiJwLm1pcmtoYWJhekBnbWFpbC5jb20ifQ.wCKqKSTUGLdTutdYu9pJe_MGCh95fS2bimeLOjzwkOI",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file_id",
+											"value": "5",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "title",
+											"value": "بررسی عمیق نحوه عملکرد Null Safety و Type Safety",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "length",
+											"value": "18",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "file",
+											"description": "required",
+											"type": "file",
+											"src": "Radio-Flutter-E1-_-typeSafety-and-NullSafety.mp3"
+										},
+										{
+											"key": "command",
+											"value": "update_file",
+											"description": "required",
+											"type": "text"
+										}
+									]
+								},
+								"description": "{\n    \"success\": true,\n    \"status_code\": 200,\n    \"msg\": \"successfully update\",\n    \"data\": {}\n}\n\n{\n\t\"success\": false,\n    \"status_code\": 401,\n    \"msg\": \"You are not Authorized!\"\n    \"data\": {}\n}\n\n{\n    \"success\": false,\n    \"status_code\": 403,\n    \"msg\": \"invalid token\",\n    \"data\": {}\n}\n\n{\n    \"success\": false,\n    \"status_code\": 400,\n    \"msg\": \"required fields not valid\",\n    \"data\": {}\n}\n\n{\n    \"success\": false,\n    \"status_code\": 409,\n    \"msg\": \"file not exist\",\n    \"data\": {}\n}"
+							},
+							"response": []
+						},
+						{
+							"name": "update podcast : title",
+							"request": {
+								"url": "https://techblog.sasansafari.com/Techblog/api/podcast/post.php",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE1IiwiZW1haWwiOiJwLm1pcmtoYWJhekBnbWFpbC5jb20ifQ.wCKqKSTUGLdTutdYu9pJe_MGCh95fS2bimeLOjzwkOI",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "podcast_id",
+											"value": "25",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "user_id",
+											"value": "14",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "cat_id",
+											"value": "6",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "command",
+											"value": "update_title",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "title",
+											"value": "رادیو فلاتر",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"description": "{\n    \"success\": true,\n    \"status_code\": 200,\n    \"msg\": \"successfully update\",\n    \"data\": {}\n}\n\n{\n\t\"success\": false,\n    \"status_code\": 401,\n    \"msg\": \"You are not Authorized!\"\n    \"data\": {}\n}\n\n{\n    \"success\": false,\n    \"status_code\": 403,\n    \"msg\": \"invalid token\",\n    \"data\": {}\n}\n\n{\n    \"success\": false,\n    \"status_code\": 400,\n    \"msg\": \"required fields not valid\",\n    \"data\": {}\n}"
+							},
+							"response": []
+						},
+						{
+							"name": "change status",
+							"request": {
+								"url": "https://techblog.sasansafari.com/Techblog/api/podcast/post.php",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE1IiwiZW1haWwiOiJwLm1pcmtoYWJhekBnbWFpbC5jb20ifQ.wCKqKSTUGLdTutdYu9pJe_MGCh95fS2bimeLOjzwkOI",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "podcast_id",
+											"value": "25",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "1",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "command",
+											"value": "change_status",
+											"description": "required",
+											"type": "text"
+										}
+									]
+								},
+								"description": "change status : {\n\t0: 'پیش نویس',\n\t1: 'منتشر شده',\n\t2: 'در انتظار تایید'\n}\n\n{\n    \"success\": true,\n    \"status_code\": 200,\n    \"msg\": \"status changed\",\n    \"data\": {}\n}\n\n{\n\t\"success\": false,\n    \"status_code\": 401,\n    \"msg\": \"You are not Authorized!\"\n    \"data\": {}\n}\n\n{\n    \"success\": false,\n    \"status_code\": 403,\n    \"msg\": \"invalid token\",\n    \"data\": {}\n}\n\n{\n    \"success\": false,\n    \"status_code\": 400,\n    \"msg\": \"required fields not valid\",\n    \"data\": {}\n}"
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "Home",
+			"description": "",
+			"item": [
+				{
+					"name": "get home items",
+					"request": {
+						"url": {
+							"raw": "https://techblog.sasansafari.com/Techblog/api/home/?command=index",
+							"protocol": "https",
+							"host": [
+								"techblog",
+								"sasansafari",
+								"com"
+							],
+							"path": [
+								"Techblog",
+								"api",
+								"home",
+								""
+							],
+							"query": [
+								{
+									"key": "command",
+									"value": "index",
+									"equals": true,
+									"description": "required"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": "home page : {\n\t\n\tposter,\n\ttop_podcasts,\n\ttop_articles,\n\ttags,\n\tcategories\n}"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "register",
+			"description": "",
+			"item": [
+				{
+					"name": "register email",
+					"request": {
+						"url": "https://techblog.sasansafari.com/Techblog/api/register/action.php",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "p.mirkhabaz@gmail.com",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "command",
+									"value": "register",
+									"description": "required"
+								}
+							]
+						},
+						"description": "{\n    \"response\": true / false,\n    \"user_id\": \"user_id | \"\" \"\n}"
+					},
+					"response": []
+				},
+				{
+					"name": "verify code",
+					"request": {
+						"url": "https://techblog.sasansafari.com/Techblog/api/register/action.php",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "p.mirkhabaz@gmail.com",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "15",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "code",
+									"value": "200825",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "command",
+									"value": "verify",
+									"description": "required",
+									"type": "text"
+								}
+							]
+						},
+						"description": "{\n    \"response\": \"verified | incorrect_code | expired\",\n    \"user_id\": \"1\",\n    \"token\" : \"\"\n}"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"description": "",
+			"item": [
+				{
+					"name": "get info",
+					"request": {
+						"url": {
+							"raw": "https://techblog.sasansafari.com/Techblog/api/user/?command=info&user_id=2",
+							"protocol": "https",
+							"host": [
+								"techblog",
+								"sasansafari",
+								"com"
+							],
+							"path": [
+								"Techblog",
+								"api",
+								"user",
+								""
+							],
+							"query": [
+								{
+									"key": "command",
+									"value": "info",
+									"equals": true,
+									"description": "required"
+								},
+								{
+									"key": "user_id",
+									"value": "2",
+									"equals": true,
+									"description": "required"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjkiLCJlbWFpbCI6InAubWlya2hhYmF6QGdtYWlsLmNvbSJ9.GIpaE3D6gGvNUdvsR1xeO16TiV-1XWVJOvMaW38Dm1A",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "{\n    \"status_code\": 200,\n    \"response\": {\n        \"id\": 1,\n        \"name\": \"پوریا میرخباز\",\n        \"email\": \"p.mirkhabaz@gmail.com\",\n        \"image\": \"/Techblog/assets/upload/images/users/20220510154553.jpg\",\n        \"token\": \"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwiZW1haWwiOiJwLm1pcmtoYWJhekBnbWFpbC5jb20ifQ.BcMNuYg9IBXzCjdC0j2o91e5vnMJsTUYFLfCtqe9ncc\",\n        \"create_at\": \"2022-05-06 14:10:59\"\n    },\n    \"msg\": \"Your Token is valid!\"\n}"
+					},
+					"response": []
+				},
+				{
+					"name": "update user info",
+					"request": {
+						"url": {
+							"raw": "https://techblog.sasansafari.com/Techblog/api/user/?command=update",
+							"protocol": "https",
+							"host": [
+								"techblog",
+								"sasansafari",
+								"com"
+							],
+							"path": [
+								"Techblog",
+								"api",
+								"user",
+								""
+							],
+							"query": [
+								{
+									"key": "command",
+									"value": "update",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjIiLCJlbWFpbCI6InAubWlya2hhYmF6QGdtYWlsLmNvbSJ9._pS_e2tmZAWj-525OcxFD1gZjZ7RLbajSu64XOnsXe0",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "پوریا میرخباز",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"value": "",
+									"description": "",
+									"type": "file"
+								},
+								{
+									"key": "user_id",
+									"value": "2",
+									"description": "required",
+									"type": "text"
+								}
+							]
+						},
+						"description": "update : {\n\tname,\n\timage\n}\n\n{\n    \"status_code\": 200,\n    \"response\": \"updated\" / \"error\",\n    \"msg\": \"Your Token is valid!\"\n}"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "get app categories",
+			"request": {
+				"url": {
+					"raw": "https://techblog.sasansafari.com/Techblog/api/article/get.php?command=categories",
+					"protocol": "https",
+					"host": [
+						"techblog",
+						"sasansafari",
+						"com"
+					],
+					"path": [
+						"Techblog",
+						"api",
+						"article",
+						"get.php"
+					],
+					"query": [
+						{
+							"key": "command",
+							"value": "categories",
+							"equals": true,
+							"description": "required"
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "get tags",
+			"request": {
+				"url": {
+					"raw": "https://techblog.sasansafari.com/Techblog/api/article/get.php?command=tags",
+					"protocol": "https",
+					"host": [
+						"techblog",
+						"sasansafari",
+						"com"
+					],
+					"path": [
+						"Techblog",
+						"api",
+						"article",
+						"get.php"
+					],
+					"query": [
+						{
+							"key": "command",
+							"value": "tags",
+							"equals": true,
+							"description": "required"
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
