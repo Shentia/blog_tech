@@ -1,4 +1,6 @@
+import 'package:blog_tech/controller/home_screen_controller.dart';
 import 'package:flutter/material.dart';
+import 'package:get/instance_manager.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'colors.dart';
 import '../models/fake_data.dart';
@@ -43,7 +45,9 @@ class MainTags extends StatelessWidget {
             const Icon(Icons.collections_bookmark_outlined,
                 color: Colors.white),
             Center(
-              child: Text(hashtag[index].title, style: textTheme.headline1),
+              child: Text(
+                  Get.find<HomeScreenController>().tagsList[index].title,
+                  style: textTheme.headline1),
             ),
           ],
         ),

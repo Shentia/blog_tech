@@ -1,4 +1,3 @@
-import 'package:blog_tech/component/api_constant.dart';
 import 'package:blog_tech/component/my_component.dart';
 import 'package:blog_tech/gen/assets.gen.dart';
 import 'package:blog_tech/services/dio_service.dart';
@@ -25,8 +24,6 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    DioService().getMethod(ApiConstant.getHomeItem);
-
     var textTheme = Theme.of(context).textTheme;
     var size = MediaQuery.of(context).size;
     double bodyMargin = size.width / 10;
