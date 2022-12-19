@@ -2,7 +2,6 @@
 import 'package:blog_tech/controller/home_screen_controller.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:get/get.dart';
 import '../component/my_component.dart';
 import '../component/strings.dart';
@@ -29,23 +28,28 @@ class homeScreen extends StatelessWidget {
     // homeScreenController.getHomeItems();
     return SingleChildScrollView(
       physics: const BouncingScrollPhysics(),
-      child: Padding(
-        padding: const EdgeInsets.fromLTRB(0, 15, 0, 0),
-        child: Column(
-          children: [
-            HomePagePoster(size: size, textTheme: textTheme),
-            const SizedBox(height: 8),
-            topTagsList(),
-            const SizedBox(height: 28),
-            HomePageSeeMore(bodyMargin: bodyMargin, textTheme: textTheme),
-            topVisited(),
-            HomePageSeeMorePodcast(
-                bodyMargin: bodyMargin, textTheme: textTheme),
-            HomePagePodastList(size: size, bodyMargin: bodyMargin),
-            const SizedBox(
-              height: 50,
-            )
-          ],
+      child: Obx(
+        () => Padding(
+          padding: const EdgeInsets.fromLTRB(0, 15, 0, 0),
+          child: homeScreenController.loading.value == false
+              ? Column(
+                  children: [
+                    posters(),
+                    const SizedBox(height: 8),
+                    topTagsList(),
+                    const SizedBox(height: 28),
+                    HomePageSeeMore(
+                        bodyMargin: bodyMargin, textTheme: textTheme),
+                    topVisited(),
+                    HomePageSeeMorePodcast(
+                        bodyMargin: bodyMargin, textTheme: textTheme),
+                    HomePagePodastList(size: size, bodyMargin: bodyMargin),
+                    const SizedBox(
+                      height: 50,
+                    )
+                  ],
+                )
+              : const Loading(),
         ),
       ),
     );
@@ -149,6 +153,57 @@ class homeScreen extends StatelessWidget {
             }),
             itemCount: homeScreenController.tagsList.length),
       ),
+    );
+  }
+
+  Widget posters() {
+    return Stack(
+      children: [
+        Container(
+          width: size.width / 1.2,
+          height: size.height / 4.2,
+          foregroundDecoration: const BoxDecoration(
+            borderRadius: BorderRadius.all(Radius.circular(16)),
+            gradient: GradientColors.bannerCoverGradient,
+          ),
+          child: CachedNetworkImage(
+            imageUrl: homeScreenController.poster.value.image!,
+            imageBuilder: (context, imageProvider) {
+              return Container(
+                decoration: BoxDecoration(
+                  borderRadius: const BorderRadius.all(Radius.circular(16)),
+                  image:
+                      DecorationImage(image: imageProvider, fit: BoxFit.cover),
+                ),
+              );
+            },
+            placeholder: (context, url) => const Loading(),
+            errorWidget: (context, url, error) => const Icon(
+              Icons.image_not_supported_outlined,
+              size: 50,
+              color: SolidColors.title,
+            ),
+          ),
+        ),
+        Positioned(
+          left: 0,
+          right: 0,
+          bottom: 20,
+          child: Column(
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Text(
+                    homeScreenController.poster.value.title!,
+                    style: textTheme.subtitle1,
+                  ),
+                ],
+              ),
+            ],
+          ),
+        )
+      ],
     );
   }
 }
@@ -261,71 +316,6 @@ class HomePageSeeMore extends StatelessWidget {
           Text(Strings.hotNews, style: textTheme.headline3),
         ],
       ),
-    );
-  }
-}
-
-class HomePagePoster extends StatelessWidget {
-  const HomePagePoster({
-    Key? key,
-    required this.size,
-    required this.textTheme,
-  }) : super(key: key);
-
-  final Size size;
-  final TextTheme textTheme;
-
-  @override
-  Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        Container(
-          width: size.width / 1.2,
-          height: size.height / 4.2,
-          decoration: BoxDecoration(
-            borderRadius: const BorderRadius.all(Radius.circular(16)),
-            image: DecorationImage(
-                image: AssetImage(FakeDataMap["imgUrl"]), fit: BoxFit.cover),
-          ),
-          foregroundDecoration: const BoxDecoration(
-            borderRadius: BorderRadius.all(Radius.circular(16)),
-            gradient: GradientColors.bannerCoverGradient,
-          ),
-        ),
-        Positioned(
-          left: 0,
-          right: 0,
-          bottom: 20,
-          child: Column(
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Text(
-                    FakeDataMap["author"] + " " + FakeDataMap["date"],
-                    style: textTheme.subtitle1,
-                  ),
-                  Row(
-                    children: [
-                      const Icon(Icons.remove_red_eye_outlined,
-                          color: SolidColors.posterTitle, size: 16),
-                      const SizedBox(width: 4),
-                      Text(
-                        FakeDataMap["viewCount"],
-                        style: textTheme.subtitle1,
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-              Text(
-                FakeDataMap["description"],
-                style: textTheme.headline1,
-              ),
-            ],
-          ),
-        )
-      ],
     );
   }
 }

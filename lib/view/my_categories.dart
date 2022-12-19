@@ -4,7 +4,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import '../component/colors.dart';
-import '../models/data_models.dart';
 import '../models/fake_data.dart';
 import '../component/strings.dart';
 

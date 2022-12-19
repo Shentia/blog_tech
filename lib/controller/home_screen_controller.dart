@@ -6,10 +6,10 @@ import 'package:blog_tech/services/dio_service.dart';
 import 'package:get/get.dart';
 
 class HomeScreenController extends GetxController {
-  late Rx<PosterModel> poster;
+  late Rx<PosterModel> poster = PosterModel().obs;
   late RxList<TagsModel> tagsList = RxList();
   late RxList<ArticleModel> topVisitedList = RxList();
-
+  late RxBool loading = false.obs;
   @override
   onInit() {
     super.onInit();
@@ -17,6 +17,7 @@ class HomeScreenController extends GetxController {
   }
 
   getHomeItems() async {
+    loading.value = true;
     var response = await DioService().getMethod(ApiConstant.getHomeItem);
     if (response.statusCode == 200) {
       // Success
@@ -30,6 +31,8 @@ class HomeScreenController extends GetxController {
           tagsList.add(TagsModel.fromJson(element));
         },
       );
+      poster.value = PosterModel.fromJson(response.data['poster']);
+      loading.value = false;
     }
   }
 }

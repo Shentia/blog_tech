@@ -1,7 +1,10 @@
 import 'package:blog_tech/component/colors.dart';
+import 'package:blog_tech/view/article_list_screen.dart';
 import 'package:blog_tech/view/home.dart';
+import 'package:blog_tech/view/single.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(
@@ -22,7 +25,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
         inputDecorationTheme: InputDecorationTheme(
@@ -68,9 +71,10 @@ class MyApp extends StatelessWidget {
             fontWeight: FontWeight.w300,
           ),
           headline2: TextStyle(
-              fontFamily: 'whitney',
-              fontSize: 36.0,
-              fontWeight: FontWeight.w300),
+            fontFamily: 'whitney',
+            fontSize: 36.0,
+            fontWeight: FontWeight.w300,
+          ),
           headline3: TextStyle(
               fontFamily: 'whitney',
               fontSize: 24.0,
@@ -85,11 +89,17 @@ class MyApp extends StatelessWidget {
               fontSize: 18.0,
               color: SolidColors.hintText,
               fontWeight: FontWeight.w500),
+          headline6: TextStyle(
+            fontFamily: 'whitney',
+            fontSize: 20.0,
+            fontWeight: FontWeight.w300,
+            color: SolidColors.primaryColor,
+          ),
         ),
       ),
       debugShowCheckedModeBanner: false,
       // home: SplashScreen());
-      home: HomeScreen(),
+      home: const ArticleListScreen(),
     );
   }
 }
