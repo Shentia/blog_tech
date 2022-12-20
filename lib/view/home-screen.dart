@@ -1,5 +1,6 @@
 // ignore: file_names
 import 'package:blog_tech/controller/home_screen_controller.dart';
+import 'package:blog_tech/controller/single_article_controller.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -18,6 +19,8 @@ class homeScreen extends StatelessWidget {
   }) : super(key: key);
 
   HomeScreenController homeScreenController = Get.put(HomeScreenController());
+  SingleArticleController singleArticleController =
+      Get.put(SingleArticleController());
 
   final Size size;
   final TextTheme textTheme;
@@ -62,70 +65,77 @@ class homeScreen extends StatelessWidget {
         () => ListView.builder(
             scrollDirection: Axis.horizontal,
             itemBuilder: (((context, index) {
-              return Padding(
-                padding: EdgeInsets.only(left: index == 0 ? bodyMargin : 15),
-                child: Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(3.0),
-                      child: SizedBox(
-                        height: size.height / 4.9,
-                        width: size.width / 2.1,
-                        child: Stack(children: [
-                          Container(
-                            decoration: BoxDecoration(
-                              borderRadius:
-                                  const BorderRadius.all(Radius.circular(15)),
-                              image: DecorationImage(
-                                  image: NetworkImage(homeScreenController
-                                      .topVisitedList[index].image!),
-                                  fit: BoxFit.cover),
+              return GestureDetector(
+                onTap: (() {
+                  Get.find<SingleArticleController>().getArticleInfo(
+                      homeScreenController.topVisitedList[index].id);
+                }),
+                child: Padding(
+                  padding: EdgeInsets.only(left: index == 0 ? bodyMargin : 15),
+                  child: Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(3.0),
+                        child: SizedBox(
+                          height: size.height / 4.9,
+                          width: size.width / 2.1,
+                          child: Stack(children: [
+                            Container(
+                              decoration: BoxDecoration(
+                                borderRadius:
+                                    const BorderRadius.all(Radius.circular(15)),
+                                image: DecorationImage(
+                                    image: NetworkImage(homeScreenController
+                                        .topVisitedList[index].image!),
+                                    fit: BoxFit.cover),
+                              ),
+                              foregroundDecoration: const BoxDecoration(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(15)),
+                                gradient: GradientColors.bannerCoverGradient,
+                              ),
                             ),
-                            foregroundDecoration: const BoxDecoration(
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(15)),
-                              gradient: GradientColors.bannerCoverGradient,
-                            ),
-                          ),
-                          Positioned(
-                            left: 0,
-                            right: 0,
-                            bottom: 20,
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceAround,
-                              children: [
-                                Text(
-                                  homeScreenController
-                                      .topVisitedList[index].author!,
-                                  style: textTheme.subtitle1,
-                                ),
-                                Row(
-                                  children: [
-                                    const Icon(Icons.remove_red_eye_outlined,
-                                        color: SolidColors.posterTitle,
-                                        size: 16),
-                                    const SizedBox(width: 4),
-                                    Text(
-                                      homeScreenController
-                                          .topVisitedList[index].view!,
-                                      style: textTheme.subtitle1,
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
-                          )
-                        ]),
+                            Positioned(
+                              left: 0,
+                              right: 0,
+                              bottom: 20,
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceAround,
+                                children: [
+                                  Text(
+                                    homeScreenController
+                                        .topVisitedList[index].author!,
+                                    style: textTheme.subtitle1,
+                                  ),
+                                  Row(
+                                    children: [
+                                      const Icon(Icons.remove_red_eye_outlined,
+                                          color: SolidColors.posterTitle,
+                                          size: 16),
+                                      const SizedBox(width: 4),
+                                      Text(
+                                        homeScreenController
+                                            .topVisitedList[index].view!,
+                                        style: textTheme.subtitle1,
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            )
+                          ]),
+                        ),
                       ),
-                    ),
-                    SizedBox(
-                        width: size.width / 2.4,
-                        child: Text(
-                          homeScreenController.topVisitedList[index].title!,
-                          maxLines: 2,
-                          overflow: TextOverflow.ellipsis,
-                        )),
-                  ],
+                      SizedBox(
+                          width: size.width / 2.4,
+                          child: Text(
+                            homeScreenController.topVisitedList[index].title!,
+                            maxLines: 2,
+                            overflow: TextOverflow.ellipsis,
+                          )),
+                    ],
+                  ),
                 ),
               );
             })),
@@ -142,12 +152,16 @@ class homeScreen extends StatelessWidget {
             //In khaili bahal bod
             scrollDirection: Axis.horizontal,
             itemBuilder: ((context, index) {
-              return Padding(
-                padding:
-                    EdgeInsets.fromLTRB(index == 0 ? bodyMargin : 10, 8, 0, 0),
-                child: MainTags(
-                  textTheme: textTheme,
-                  index: index,
+              return GestureDetector(
+                onTap: () => Get.find<SingleArticleController>()
+                    .getArticleInfo(homeScreenController.tagsList[index].id),
+                child: Padding(
+                  padding: EdgeInsets.fromLTRB(
+                      index == 0 ? bodyMargin : 10, 8, 0, 0),
+                  child: MainTags(
+                    textTheme: textTheme,
+                    index: index,
+                  ),
                 ),
               );
             }),
