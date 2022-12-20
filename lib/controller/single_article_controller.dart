@@ -1,10 +1,10 @@
 import 'package:blog_tech/models/article_info_model.dart';
 import 'package:blog_tech/models/tags_model.dart';
-import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 import '../component/api_constant.dart';
 import '../models/article_model.dart';
 import '../services/dio_service.dart';
+import '../view/single.dart';
 
 class SingleArticleController extends GetxController {
   RxBool loading = false.obs;
@@ -20,7 +20,8 @@ class SingleArticleController extends GetxController {
     // getArticleInfo();
   }
 
-  getArticleInfo() async {
+  getArticleInfo(var id) async {
+    articleInfoModel = articleInfoModel().obs;
     loading.value = true;
     var userId = '';
     // debugPrint(
@@ -39,5 +40,8 @@ class SingleArticleController extends GetxController {
     response.data['related'].forEach((element) {
       relatedArticleList.add(ArticleModel.fromJson(element));
     });
+    Get.to(
+      Single(),
+    );
   }
 }

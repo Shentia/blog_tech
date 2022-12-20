@@ -75,4 +75,12 @@ class GradientColors {
       Color.fromARGB(255, 68, 4, 87),
     ],
   );
+  static const LinearGradient singleArticleBanner = LinearGradient(
+    begin: Alignment.topCenter,
+    end: Alignment.bottomCenter,
+    colors: [
+      Color.fromARGB(255, 68, 4, 87),
+      Color.fromARGB(0, 255, 255, 255),
+    ],
+  );
 }

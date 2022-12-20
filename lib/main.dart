@@ -99,7 +99,7 @@ class MyApp extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       // home: SplashScreen());
-      home: const ArticleListScreen(),
+      home: ArticleListScreen(title: "Article"),
     );
   }
 }

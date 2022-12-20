@@ -6,8 +6,13 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../component/my_component.dart';
 
+// ignore: must_be_immutable
 class ArticleListScreen extends StatelessWidget {
-  const ArticleListScreen({super.key});
+  String title;
+  ArticleListScreen({
+    super.key,
+    required this.title,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +25,7 @@ class ArticleListScreen extends StatelessWidget {
 
     return SafeArea(
         child: Scaffold(
-      appBar: appBar(textTheme, "Articles"),
+      appBar: appBar(textTheme, title),
       body: Obx(
         () => SizedBox(
           child: ListView.builder(
@@ -32,16 +37,19 @@ class ArticleListScreen extends StatelessWidget {
                     children: [
                       CachedNetworkImage(
                           imageUrl:
-                              listArticleController.articleList[index].image,
+                              listArticleController.articleList[index].image!,
                           imageBuilder: (context, imageProvider) {
                             return GestureDetector(
                               onTap: (() {
-                                singleArticleController.id.value = int.parse(
+                                // singleArticleController.id.value = int.parse(
+                                //     listArticleController
+                                //         .articleList[index].id);
+                                // singleArticleController.getArticleInfo(id);
+                                //TODO bejaye ID listArticleController.articleList[index].id mizaqrim
+
+                                singleArticleController.getArticleInfo(
                                     listArticleController
                                         .articleList[index].id);
-                                Get.to(
-                                  const Single(),
-                                );
                               }),
                               child: Padding(
                                 padding: const EdgeInsets.all(8.0),
@@ -84,7 +92,7 @@ class ArticleListScreen extends StatelessWidget {
                           SizedBox(
                             width: Get.width / 2,
                             child: Text(
-                              listArticleController.articleList[index].title,
+                              listArticleController.articleList[index].title!,
                               textAlign: TextAlign.end,
                               overflow: TextOverflow.ellipsis,
                               maxLines: 2,
@@ -95,7 +103,7 @@ class ArticleListScreen extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Text(
-                                listArticleController.articleList[index].view,
+                                listArticleController.articleList[index].view!,
                                 style: textTheme.bodyText2,
                               ),
                               const SizedBox(
@@ -103,7 +111,8 @@ class ArticleListScreen extends StatelessWidget {
                                 height: 30,
                               ),
                               Text(
-                                listArticleController.articleList[index].author,
+                                listArticleController
+                                    .articleList[index].author!,
                                 style: textTheme.bodyText2,
                               ),
                             ],

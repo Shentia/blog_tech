@@ -78,7 +78,7 @@ class homeScreen extends StatelessWidget {
                                   const BorderRadius.all(Radius.circular(15)),
                               image: DecorationImage(
                                   image: NetworkImage(homeScreenController
-                                      .topVisitedList[index].image),
+                                      .topVisitedList[index].image!),
                                   fit: BoxFit.cover),
                             ),
                             foregroundDecoration: const BoxDecoration(
@@ -96,7 +96,7 @@ class homeScreen extends StatelessWidget {
                               children: [
                                 Text(
                                   homeScreenController
-                                      .topVisitedList[index].author,
+                                      .topVisitedList[index].author!,
                                   style: textTheme.subtitle1,
                                 ),
                                 Row(
@@ -107,7 +107,7 @@ class homeScreen extends StatelessWidget {
                                     const SizedBox(width: 4),
                                     Text(
                                       homeScreenController
-                                          .topVisitedList[index].view,
+                                          .topVisitedList[index].view!,
                                       style: textTheme.subtitle1,
                                     ),
                                   ],
@@ -121,7 +121,7 @@ class homeScreen extends StatelessWidget {
                     SizedBox(
                         width: size.width / 2.4,
                         child: Text(
-                          homeScreenController.topVisitedList[index].title,
+                          homeScreenController.topVisitedList[index].title!,
                           maxLines: 2,
                           overflow: TextOverflow.ellipsis,
                         )),
