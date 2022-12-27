@@ -4,7 +4,9 @@ import 'package:blog_tech/services/dio_service.dart';
 import 'package:blog_tech/view/home-screen.dart';
 import 'package:blog_tech/view/profile-screen.dart';
 import 'package:blog_tech/component/strings.dart';
+import 'package:blog_tech/view/register/register-intro.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:get/state_manager.dart';
 import 'package:share_plus/share_plus.dart';
 import '../component/colors.dart';
@@ -190,7 +192,9 @@ class ButtomNavigation extends StatelessWidget {
                   ),
                 ),
                 IconButton(
-                  onPressed: (() {}),
+                  onPressed: ((() {
+                    Get.to(RegisterIntro());
+                  })),
                   icon: const Icon(
                     Icons.podcasts,
                     color: Colors.white,

@@ -1,14 +1,16 @@
 import 'package:blog_tech/view/my_categories.dart';
+import 'package:get/get.dart';
 
-import '../component/strings.dart';
+import '../../component/strings.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:validators/validators.dart';
-import '../gen/assets.gen.dart';
+import '../../controller/register-controller.dart';
+import '../../gen/assets.gen.dart';
 
 class RegisterIntro extends StatelessWidget {
-  const RegisterIntro({Key? key}) : super(key: key);
-
+  RegisterIntro({Key? key}) : super(key: key);
+  RegisterController registerController = Get.put(RegisterController());
   @override
   Widget build(BuildContext context) {
     var textTheme = Theme.of(context).textTheme;
@@ -70,6 +72,7 @@ class RegisterIntro extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.all(24),
                     child: TextField(
+                      controller: registerController.emailTextEditingController,
                       onChanged: (value) {
                         print(
                             "$value is email: ${isEmail(value)}"); // print(value +
@@ -129,6 +132,8 @@ class RegisterIntro extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.all(24),
                     child: TextField(
+                      controller:
+                          registerController.activetedCodeTextEditingController,
                       onChanged: (value) {
                         print(
                             "$value is email: ${isEmail(value)}"); // print(value +
