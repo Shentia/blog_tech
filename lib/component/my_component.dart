@@ -2,7 +2,6 @@ import 'package:blog_tech/controller/home_screen_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:get/get.dart';
-import 'package:get/instance_manager.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'colors.dart';
 

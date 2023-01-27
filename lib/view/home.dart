@@ -1,13 +1,11 @@
 import 'package:blog_tech/component/my_component.dart';
 import 'package:blog_tech/gen/assets.gen.dart';
-import 'package:blog_tech/services/dio_service.dart';
 import 'package:blog_tech/view/home-screen.dart';
 import 'package:blog_tech/view/profile-screen.dart';
 import 'package:blog_tech/component/strings.dart';
 import 'package:blog_tech/view/register/register-intro.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/state_manager.dart';
 import 'package:share_plus/share_plus.dart';
 import '../component/colors.dart';
 
@@ -19,6 +17,7 @@ import '../component/colors.dart';
 
 final GlobalKey<ScaffoldState> _key = GlobalKey();
 
+// ignore: must_be_immutable
 class HomeScreen extends StatelessWidget {
   RxInt selectedPageIndex = 0.obs;
 
@@ -55,7 +54,7 @@ class HomeScreen extends StatelessWidget {
                 ListTile(
                   title: Text(
                     Strings.profile,
-                    style: textTheme.headline4,
+                    style: textTheme.headlineMedium,
                   ),
                   onTap: () {},
                 ),
@@ -63,7 +62,7 @@ class HomeScreen extends StatelessWidget {
                 ListTile(
                   title: Text(
                     Strings.about,
-                    style: textTheme.headline4,
+                    style: textTheme.headlineMedium,
                   ),
                   onTap: () {},
                 ),
@@ -193,6 +192,7 @@ class ButtomNavigation extends StatelessWidget {
                 ),
                 IconButton(
                   onPressed: ((() {
+                    //check login status
                     Get.to(RegisterIntro());
                   })),
                   icon: const Icon(

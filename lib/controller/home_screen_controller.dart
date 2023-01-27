@@ -5,10 +5,13 @@ import 'package:blog_tech/models/tags_model.dart';
 import 'package:blog_tech/services/dio_service.dart';
 import 'package:get/get.dart';
 
+import '../models/podcast_model.dart';
+
 class HomeScreenController extends GetxController {
   late Rx<PosterModel> poster = PosterModel().obs;
   late RxList<TagsModel> tagsList = RxList();
   late RxList<ArticleModel> topVisitedList = RxList();
+  late RxList<PodcastModel> topPodcastList = RxList();
   late RxBool loading = false.obs;
   @override
   onInit() {
@@ -29,6 +32,12 @@ class HomeScreenController extends GetxController {
       response.data['tags'].forEach(
         (element) {
           tagsList.add(TagsModel.fromJson(element));
+        },
+      );
+
+      response.data['top_podcasts'].forEach(
+        (element) {
+          topPodcastList.add(PodcastModel.fromJson(element));
         },
       );
       poster.value = PosterModel.fromJson(response.data['poster']);

@@ -1,4 +1,3 @@
-// ignore: file_names
 import 'package:blog_tech/controller/home_screen_controller.dart';
 import 'package:blog_tech/controller/single_article_controller.dart';
 import 'package:cached_network_image/cached_network_image.dart';
@@ -7,7 +6,6 @@ import 'package:get/get.dart';
 import '../component/my_component.dart';
 import '../component/strings.dart';
 import '../component/colors.dart';
-import '../models/fake_data.dart';
 
 // ignore: camel_case_types, must_be_immutable
 class homeScreen extends StatelessWidget {
@@ -46,7 +44,7 @@ class homeScreen extends StatelessWidget {
                     topVisited(),
                     HomePageSeeMorePodcast(
                         bodyMargin: bodyMargin, textTheme: textTheme),
-                    HomePagePodastList(size: size, bodyMargin: bodyMargin),
+                    topPodcastList(),
                     const SizedBox(
                       height: 50,
                     )
@@ -220,20 +218,8 @@ class homeScreen extends StatelessWidget {
       ],
     );
   }
-}
 
-class HomePagePodastList extends StatelessWidget {
-  const HomePagePodastList({
-    Key? key,
-    required this.size,
-    required this.bodyMargin,
-  }) : super(key: key);
-
-  final Size size;
-  final double bodyMargin;
-
-  @override
-  Widget build(BuildContext context) {
+  Widget topPodcastList() {
     return SizedBox(
       height: size.height / 3.5,
       child: ListView.builder(
@@ -254,8 +240,8 @@ class HomePagePodastList extends StatelessWidget {
                             borderRadius:
                                 const BorderRadius.all(Radius.circular(15)),
                             image: DecorationImage(
-                                image:
-                                    NetworkImage(podcastList[index].imageURL),
+                                image: NetworkImage(homeScreenController
+                                    .topPodcastList[index].poster!),
                                 fit: BoxFit.cover),
                           ),
                           foregroundDecoration: const BoxDecoration(
@@ -269,7 +255,7 @@ class HomePagePodastList extends StatelessWidget {
                   SizedBox(
                     width: size.width / 2.4,
                     child: Text(
-                      podcastList[index].title,
+                      homeScreenController.topPodcastList[index].title!,
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
                     ),
@@ -278,7 +264,7 @@ class HomePagePodastList extends StatelessWidget {
               ),
             );
           })),
-          itemCount: podcastList.length),
+          itemCount: homeScreenController.topPodcastList.length),
     );
   }
 }

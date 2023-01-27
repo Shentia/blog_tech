@@ -1,12 +1,13 @@
 import 'package:blog_tech/component/colors.dart';
-import 'package:blog_tech/view/article_list_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:get_storage/get_storage.dart';
 
 import 'view/splash_screen.dart';
 
-void main() {
+void main() async {
+  await GetStorage.init();
   SystemChrome.setSystemUIOverlayStyle(
     SystemUiOverlayStyle.light.copyWith(
       statusBarColor: SolidColors.statusBarColor,

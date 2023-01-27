@@ -1,6 +1,7 @@
 import 'dart:developer';
 
 import 'package:dio/dio.dart';
+import 'package:dio/dio.dart' as dio_service;
 
 class DioService {
   Dio dio = Dio();
@@ -18,9 +19,10 @@ class DioService {
 
   Future<dynamic> postMethod(String url, Map<String, dynamic> map) async {
     dio.options.headers['content-Type'] = 'application/json';
+    //Need token for post method
     return await dio
         .post(url,
-            data: map,
+            data: dio_service.FormData.fromMap(map),
             options: Options(responseType: ResponseType.json, method: 'Post'))
         .then((response) {
       log(response.toString());

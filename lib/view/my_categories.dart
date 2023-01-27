@@ -85,7 +85,7 @@ class _MyCategoriesState extends State<MyCategories> {
                                 if (!myCategories.contains(hashtag[index])) {
                                   myCategories.add(hashtag[index]);
                                 } else {
-                                  print("${hashtag[index].title} exist.");
+                                  debugPrint("${hashtag[index].title} exist.");
                                 }
                               });
                             },

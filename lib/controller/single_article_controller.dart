@@ -14,12 +14,6 @@ class SingleArticleController extends GetxController {
   RxList<ArticleModel> relatedArticleList = RxList();
   Rx<ArticleInfoModel> articleInfoModel = ArticleInfoModel().obs;
 
-  @override
-  void onInit() {
-    super.onInit();
-    // getArticleInfo();
-  }
-
   getArticleInfo(var id) async {
     articleInfoModel = articleInfoModel().obs;
     loading.value = true;

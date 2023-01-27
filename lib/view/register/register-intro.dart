@@ -1,4 +1,3 @@
-import 'package:blog_tech/view/my_categories.dart';
 import 'package:get/get.dart';
 
 import '../../component/strings.dart';
@@ -8,6 +7,7 @@ import 'package:validators/validators.dart';
 import '../../controller/register-controller.dart';
 import '../../gen/assets.gen.dart';
 
+// ignore: must_be_immutable
 class RegisterIntro extends StatelessWidget {
   RegisterIntro({Key? key}) : super(key: key);
   RegisterController registerController = Get.put(RegisterController());
@@ -74,7 +74,7 @@ class RegisterIntro extends StatelessWidget {
                     child: TextField(
                       controller: registerController.emailTextEditingController,
                       onChanged: (value) {
-                        print(
+                        debugPrint(
                             "$value is email: ${isEmail(value)}"); // print(value +
                         //     "is email = " +
                         //     isEmail.hasMatch(value).toString());
@@ -90,6 +90,7 @@ class RegisterIntro extends StatelessWidget {
                   ),
                   ElevatedButton(
                       onPressed: () {
+                        registerController.register();
                         Navigator.pop(context);
                         _activatedBottomSheet(context, size, textTheme);
                       },
@@ -135,7 +136,7 @@ class RegisterIntro extends StatelessWidget {
                       controller:
                           registerController.activetedCodeTextEditingController,
                       onChanged: (value) {
-                        print(
+                        debugPrint(
                             "$value is email: ${isEmail(value)}"); // print(value +
                         //     "is email = " +
                         //     isEmail.hasMatch(value).toString());
@@ -150,9 +151,11 @@ class RegisterIntro extends StatelessWidget {
                     ),
                   ),
                   ElevatedButton(
-                      onPressed: () {
-                        Navigator.of(context).pushReplacement(MaterialPageRoute(
-                            builder: (context) => const MyCategories()));
+                      onPressed: () async {
+                        registerController.verify();
+
+                        // Navigator.of(context).pushReplacement(MaterialPageRoute(
+                        //     builder: (context) => const MyCategories()));
                       },
                       child: const Text("Continue"))
                 ],

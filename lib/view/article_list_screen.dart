@@ -1,6 +1,5 @@
 import 'package:blog_tech/controller/list_article_controller.dart';
 import 'package:blog_tech/controller/single_article_controller.dart';
-import 'package:blog_tech/view/single.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
